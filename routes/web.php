@@ -11,6 +11,18 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/star', function () {
+
+
+    return view('starinfo');
+});
+
+Route::get('/about', function () {
+
+
+    return view('about');
+});
+
 Route::get('/stargate', function () {
 
     $stars = Star::all();
@@ -20,9 +32,16 @@ Route::get('/stargate', function () {
     ]);
 });
 
+Route::get('/constellations', function () {
+
+    return view('constellations');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

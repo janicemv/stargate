@@ -12,10 +12,24 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
             },
         },
+        colors: {
+            'blue': '#04119c',
+            'purple': '#1e0741',
+            'pink': '#ff49db',
+            'orange': '#ff7849',
+            'green': '#13ce66',
+            'yellow': '#ffc82c',
+            'gray-dark': '#273444',
+            'gray': '#8492a6',
+            'gray-light': '#d3dce6',
+            'white': '#fff',
+          },
     },
 
     plugins: [forms],
+
+    darkMode: 'class'
 };

@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 #logo {
-    width: 54px;
+    width: 142px;
 }
 
 .star-card {

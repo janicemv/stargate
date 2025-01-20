@@ -1,0 +1,1 @@
+<dt class="text-md font-medium text-purple pb-2 font-extrabold">{{ $slot }}</dt>

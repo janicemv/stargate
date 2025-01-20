@@ -1,68 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layout>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stargate - Adhara Starpath</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-</head>
-
-<body>
-
-    <div class="px-10">
-        <nav class="flex justify-between items-center py-4 border-b border-white/10">
-            <div>
-                <a href="/">
-                    <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="" id="logo">
-                </a>
+    <div class="relative px-6 lg:px-8">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    Your source for everything about Stars <a href="/stargate" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span><span aria-hidden="true">&rarr;</span></a>
+                </div>
             </div>
-
-            <div class="space-x-6 font-bold">
-                <a href="/">About</a>
-                <a href="#">Stargate Dabatase</a>
-            </div>
-
-            @auth
-            <div class="space-x-6 font-bold flex">
-                <a href="/jobs/create">Post a Job</a>
-
-                <form method="POST" action="/logout">
-                    @csrf
-                    @method('DELETE')
-
-                    <button>Log Out</button>
-                </form>
-            </div>
-            @endauth
-
-            @guest
-            <div class="space-x-6 font-bold">
-                <a href="/register">Sign Up</a>
-                <a href="/login">Log In</a>
-            </div>
-            @endguest
-        </nav>
-
-
-    </div>
-
-    <div class="container">
-
-        <div class="card" style="width: 18rem;">
-            <img src="{{ Vite::asset('resources/images/logo.svg') }}" class="card-img-top star-card" alt="star">
-            <div class="card-body">
-                <h5 class="card-title">Star</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-info">Go somewhere</a>
+            <div class="text-center">
+                <h1 class="text-balance text-5xl font-extrabold tracking-tight text-gray-900 uppercase">Your virtual Stargate</h1>
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8"> Discover a comprehensive database of Stars and Constellations, featuring official data alongside their cultural, magical, spiritual, and historical connections. </p>
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Explore the universe like never before!</p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="/about" class="text-sm/6 font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+                </div>
             </div>
         </div>
 
+        <!-- <div class="flex px-4 py-3 rounded-lg verflow-hidden max-w-md mx-auto">
+            <input type="email" placeholder="Search Something..."
+                class="w-full rounded-lg outline-none bg-transparent text-gray-600 text-sm" />
+
+        </div> -->
+
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-</body>
-
-</html>
+</x-layout>
