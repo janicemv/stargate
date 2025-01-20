@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#logo {
+    width: 54px;
+}
+
+.star-card {
+margin: 1rem auto;
+    width: 72px;
+}
+
