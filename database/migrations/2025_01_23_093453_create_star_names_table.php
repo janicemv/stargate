@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Star;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,10 +13,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('constellations', function (Blueprint $table) {
+        Schema::create('star_names', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(Star::class)->constrained()->cascadeOnDelete();
             $table->string('name');
-            $table->string('abbrev');
+            $table->text('reference');
+            $table->foreignIdFor(User::class);
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('constellations');
+        Schema::dropIfExists('star_names');
     }
 };

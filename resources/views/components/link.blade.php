@@ -1,0 +1,1 @@
+<a class="text-purple font-bold hover:font-bold" target="_blank" {{ $attributes }}>{{ $slot }}</a>

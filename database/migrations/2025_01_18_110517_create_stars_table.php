@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('stars', function (Blueprint $table) {
             $table->id();
-            $table->text('proper_names');
+            $table->text('name');
             $table->text('designation');
             $table->integer('HIP')->nullable();
             $table->text('BayerId');

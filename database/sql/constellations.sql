@@ -1,4 +1,4 @@
-INSERT INTO `constellations` (`constellation`, `abbrev`, `id`) VALUES
+INSERT INTO `constellations` (`name`, `abbrev`, `id`) VALUES
 ('Andromeda', 'And', 1),
 ('Antlia', 'Ant', 2),
 ('Apus', 'Aps', 3),

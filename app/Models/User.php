@@ -45,4 +45,20 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function starMagic()
+    {
+        return $this->hasMany(StarMagic::class);
+    }
+
+    public function keywords()
+
+    {
+        return $this->hasMany(Keyword::class);
+    }
+
+    public function constellationMagic()
+    {
+        return $this->hasMany(ConstellationMagic::class);
+    }
 }

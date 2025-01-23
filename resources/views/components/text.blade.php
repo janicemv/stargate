@@ -1,0 +1,1 @@
+<p class="text-sm pb-1">{{ $slot }}</p>

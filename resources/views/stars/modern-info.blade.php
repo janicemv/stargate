@@ -1,9 +1,7 @@
-<!-- Modern Correspondences -->
-<div class="px-4 py-6 sm:grid sm:grid-cols-1 sm:gap-3 sm:px-0">
-    <x-info-title>Modern Correspondences </x-info-title>
+<x-section>
+    <x-section-title>Modern Correspondences </x-section-title>
 
-    <dl class="divide-y divide-gray-100 rounded-md border border-gray-200 px-3">
-
+<x-round-container>
         <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt class="text-purple text-sm/6 font-medium text-white-900 underline sm:no-underline">Name Meaning</dt>
             <dd class="mt-1 text-sm/6 text-white-700 sm:col-span-2 sm:mt-0">Sirius</dd>
@@ -118,8 +116,8 @@
             </dd>
         </div>
 
-    </dl>
+</x-round-container>
 
 
-</div>
+</x-section>
 <!-- End Modern -->

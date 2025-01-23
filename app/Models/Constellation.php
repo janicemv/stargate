@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Constellation extends Model
 {
@@ -13,5 +14,10 @@ class Constellation extends Model
     public function stars(): HasMany
     {
         return $this->hasMany(Star::class);
+    }
+
+    public function magic()
+    {
+        return $this->hasMany(ConstellationMagic::class);
     }
 }

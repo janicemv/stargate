@@ -26,9 +26,11 @@
 
             <div class="space-x-6 font-bold">
                 <x-navlink href="/about" :active="request()->is('about')">About</x-navlink>
-                <x-navlink href="/" :active="request()->is('/')">Videos</x-navlink>
+                <x-navlink href="/" :active="request()->is('/videos')">Videos</x-navlink>
                 <x-navlink href="/stargate" :active="request()->is('stargate')">Stars</x-navlink>
                 <x-navlink href=" /constellations" :active="request()->is('constellations')">Constellations</x-navlink>
+                <x-navlink href="/references" :active="request()->is('references')">References</x-navlink>
+
             </div>
 
             @auth

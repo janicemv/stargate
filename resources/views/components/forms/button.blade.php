@@ -1,0 +1,1 @@
+<button {{ $attributes(['class' => 'bg-gray-light rounded py-2 px-6 font-bold']) }}>{{ $slot }}</button>

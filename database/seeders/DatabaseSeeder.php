@@ -16,8 +16,13 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Aileen',
+            'email' => 'aileen.daw@gmail.com',
         ]);
+
+        $this->call(ConstellationSeeder::class);
+        $this->call(StarSeeder::class);
+        $this->call(StarsMergedSeeder::class);
+        $this->call(KeywordSeeder::class);
     }
 }
