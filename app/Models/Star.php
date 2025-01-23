@@ -35,4 +35,9 @@ class Star extends Model
 
         $this->keywords()->attach($keyword);
     }
+
+    public function behenians()
+    {
+        return $this->hasMany(StarMagic::class)->where('type', 'behenian');;
+    }
 }

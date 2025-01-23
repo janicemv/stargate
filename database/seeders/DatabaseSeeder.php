@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Behenian;
+use App\Models\StarMagic;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,12 +19,18 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Aileen',
-            'email' => 'aileen.daw@gmail.com',
+            'email' => 'aileen.daw@gmail.com'
+        ]);
+
+        User::factory()->create([
+            'name' => 'Unknown',
+            'email' => 'unknown@user.com',
         ]);
 
         $this->call(ConstellationSeeder::class);
         $this->call(StarSeeder::class);
         $this->call(StarsMergedSeeder::class);
         $this->call(KeywordSeeder::class);
+        $this->call(StarMagicSeeder::class);
     }
 }

@@ -16,15 +16,18 @@ return new class extends Migration
         Schema::create('star_magics', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Star::class);
+            $table->string('type');
             $table->string('planets')->nullable();
+            $table->string('metals')->nullable();
             $table->string('gemstones')->nullable();
             $table->string('plants')->nullable();
-            $table->string('metals')->nullable();
+            $table->string('description')->nullable();
             $table->string('angel')->nullable();
             $table->string('colors')->nullable();
             $table->string('invocation')->nullable();
             $table->text('magic')->nullable();
             $table->text('reference');
+            $table->text('url')->nullable();
             $table->foreignIdFor(User::class);
             $table->timestamps();
         });

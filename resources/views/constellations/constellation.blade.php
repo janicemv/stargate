@@ -5,7 +5,18 @@
 
         <x-section-title>Magic of {{ $constellation->name}}</x-section-title>
 
-
+        <h2>Keywords Associadas:</h2>
+        @foreach ($constellation->stars as $star)
+        @if($star->keywords->isEmpty())
+        <p>Esta estrela não tem keywords associadas.</p>
+        @else
+        <ul>
+            @foreach($star->keywords as $keyword)
+            <li>{{ $keyword->name }}</li>
+            @endforeach
+        </ul>
+        @endif
+        @endforeach
 
 
     </x-section>

@@ -11,7 +11,8 @@
                     :image="Vite::asset('resources/images/stars/sirius.svg')"
                     alt="{{ $constellation->name }}"
                     title="{{ $constellation->name }}"
-                    subtitle="{{ $constellation->abbrev }}" />
+                    subtitle="{{ $constellation->abbrev }}"
+                    link="/constellations/{{ $constellation->id }}" />
             </x-slot>
 
             <x-card-list title="{{ $constellation->name }} Stars" link="/constellations/{{ $constellation->id }}" linkText="View all">

@@ -22,7 +22,6 @@ class ConstellationController extends Controller
     public function show(Constellation $constellation)
     {
 
-        $constellation->load('stars', 'magic.keywords');
 
         return view('constellations.constellation', [
             'constellation' => $constellation,
