@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Constellation;
 use App\Models\Keyword;
+use App\Models\StarMagic;
 
 class ConstellationController extends Controller
 {
@@ -22,9 +23,14 @@ class ConstellationController extends Controller
     public function show(Constellation $constellation)
     {
 
+        $constellation->load('stars', 'keywords', 'magic');
+
 
         return view('constellations.constellation', [
             'constellation' => $constellation,
+            'keywords' => Keyword::all(),
+            'magic' => StarMagic::all()
+
 
         ]);
     }

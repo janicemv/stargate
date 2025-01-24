@@ -1,0 +1,1 @@
+<sup class="font-features sups">{{ $slot }}</sup>

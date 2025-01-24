@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Constellation extends Model
@@ -18,6 +20,25 @@ class Constellation extends Model
 
     public function magic()
     {
-        return $this->hasMany(ConstellationMagic::class);
+        return $this->hasManyThrough(
+            StarMagic::class,
+            Star::class,
+            'constellation_id', // Chave estrangeira em stars
+            'id',
+            'id',
+            'id'
+        );
+    }
+
+    public function keywords(): HasManyThrough
+    {
+        return $this->hasManyThrough(
+            Keyword::class,
+            Star::class,
+            'constellation_id', // Chave estrangeira em stars
+            'id',
+            'id',
+            'id'
+        )->distinct();
     }
 }

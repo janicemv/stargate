@@ -14,6 +14,9 @@ export default {
             fontFamily: {
                 sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
             },
+            listStyleType: {
+                star: '"\\2605"',
+              },
         },
         colors: {
             'blue': '#04119c',

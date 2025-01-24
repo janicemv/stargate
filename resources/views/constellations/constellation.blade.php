@@ -1,25 +1,6 @@
 <x-layout>
     <x-page-heading>{{ $constellation->constellation}}</x-page-heading>
 
-    <x-section>
-
-        <x-section-title>Magic of {{ $constellation->name}}</x-section-title>
-
-        <h2>Keywords Associadas:</h2>
-        @foreach ($constellation->stars as $star)
-        @if($star->keywords->isEmpty())
-        <p>Esta estrela não tem keywords associadas.</p>
-        @else
-        <ul>
-            @foreach($star->keywords as $keyword)
-            <li>{{ $keyword->name }}</li>
-            @endforeach
-        </ul>
-        @endif
-        @endforeach
-
-
-    </x-section>
 
     <x-section>
 
@@ -52,10 +33,6 @@
                     <td class="px-6 py-4">{{ $star->Vmag }}</td>
                     <td class="px-6 py-4">{{ $star->RA_J2000 }}</td>
                     <td class="px-6 py-4">{{ $star->Dec_J2000 }}</td>
-
-
-
-
                 </tr>
                 @endforeach
             </tbody>
@@ -64,6 +41,89 @@
 
     </x-section>
 
+    <!-- Magic -->
 
+    @php
+    $magicData = $constellation->stars->flatMap(function($star) {
+    return $star->starMagic->map(function($magic) use ($star) {
+    return [
+    'planets' => $magic->planets,
+    'themagic' => $magic->magic,
+    'starName' => $star->name,
+    'starId' => $star->id,
+    'magic' => $magic
+    ];
+    });
+    })->filter(); // Remove itens vazios
+
+    $groupedByPlanets = $magicData
+    ->pluck('planets')
+    ->filter()
+    ->unique()
+    ->values();
+
+    $groupedByMagic = $magicData
+    ->pluck('themagic')
+    ->filter()
+    ->unique()
+    ->values();
+    @endphp
+
+    @if ($magicData->isNotEmpty())
+
+    <x-section>
+
+        <x-section-title>Magic of {{ $constellation->name}}</x-section-title>
+
+        @if ($constellation->keywords->isNotEmpty())
+
+        <x-text>
+            @foreach($constellation->keywords as $keyword)
+            <x-tag class="inline-block">{{ $keyword->name }}</x-tag>
+            @endforeach
+        </x-text>
+        @endif
+
+        <x-round-container>
+
+            <x-section-info title="Planets">
+                <ul class="list-star list-inside">
+                    @foreach($groupedByPlanets as $planet)
+                    @php
+                    $starData = $magicData->where('planets', $planet)->first();
+                    @endphp
+                    <x-list-item>
+                        {{ $planet }}
+                        <x-sup>
+                            <a href="/star/{{ $starData['starId'] }}">[{{ $starData['starName'] }}]</a>
+                        </x-sup>
+                    </x-list-item>
+                    @endforeach
+                </ul>
+            </x-section-info>
+
+            <x-section-info title="Magic">
+                <ul class="list-star list-inside">
+                    @foreach($groupedByMagic as $themagic)
+                    @php
+                    $starData = $magicData->where('themagic', $themagic)->first();
+                    @endphp
+                    <x-list-item>
+                        {{ $themagic }}
+                        <x-sup>
+                            <a href="/star/{{ $starData['starId'] }}">[{{ $starData['starName'] }}]</a>
+                        </x-sup>
+                    </x-list-item>
+                    @endforeach
+                </ul>
+            </x-section-info>
+        </x-round-container>
+
+
+
+
+
+    </x-section>
+    @endif
 
 </x-layout>

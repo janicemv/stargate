@@ -24,6 +24,11 @@ class Star extends Model
         return $this->hasMany(StarMagic::class);
     }
 
+    public function astronomy()
+    {
+        return $this->hasMany(StarAstronomy::class);
+    }
+
     public function keywords()
     {
         return $this->belongsToMany(Keyword::class, 'star_keyword');
