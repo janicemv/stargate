@@ -48,3 +48,19 @@ themeToggleBtn.addEventListener("click", function () {
         }
     }
 });
+
+// Toggle Menu
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    console.log(mobileMenuButton);
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton) {
+
+    mobileMenuButton.addEventListener('click', () => {
+        console.log('button clicked');
+        mobileMenu.classList.toggle('hidden');
+    });
+}
+});
