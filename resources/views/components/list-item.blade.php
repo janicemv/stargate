@@ -1,1 +1,1 @@
-<li> {{ $slot }}</li>
+<li class="blue-icon"> {{ $slot }}</li>

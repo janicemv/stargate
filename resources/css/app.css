@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --blue: #200F8C;
+    --blue-medium: #355B8C;
+    --blue-light: #515EA6;
+    --purple: #1e0741;
+    --purple-medium: #382B8C;
+    --purple-light: #dec9fc;
+    --pink: #BFAABC;
+    --orange: #FEB3A5;
+    --green: #16736F;
+    --yellow: #F2C46D;
+    --beige: #F2E4D8;
+    --gray-dark: #484359;
+    --gray: #726D8C;
+    --gray-light: #E1E1E1;
+    --white :#F2F2F2;
+}
 
 
 #logo {
@@ -13,3 +30,7 @@ margin: 1rem auto;
     width: 72px;
 }
 
+.blue-icon::marker{
+    color: var(--blue-medium);
+    font-weight: 600;
+}

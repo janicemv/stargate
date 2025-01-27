@@ -15,6 +15,8 @@
                     link="/constellations/{{ $constellation->id }}" />
             </x-slot>
 
+            @if ($constellation->stars->isNotEmpty())
+
             <x-card-list title="{{ $constellation->name }} Stars" link="/constellations/{{ $constellation->id }}" linkText="View all">
                 @foreach ($constellation->stars as $star)
                 <x-card-list-item
@@ -24,7 +26,11 @@
                     code="{{ $star->iau_desig }}"
                     link="/star/{{ $star->id }}" />
                 @endforeach
+        
+          
+               
             </x-card-list>
+            @endif
 
             <x-slot name="footer">
                 <x-card-footer link="/constellations/{{ $constellation->id }}" text="Read more" />

@@ -113,7 +113,7 @@
             <x-section-info title="References">
                 <ol class="list-decimal pl-5 space-y-2">
                     @foreach ($references as $reference => $data)
-                    <li id="ref-{{ $data['index'] }}" class="text-sm text-gray-600">
+                    <li id="ref-{{ $data['index'] }}" class="text-sm blue-icon">
                         @if($data['url'])
                         <a href="{{ $data['url'] }}" target="_blank">{{ $reference }}</a>
                         @else
@@ -320,7 +320,7 @@
                     $refNumber = $references[$magic->reference]['index'];
                     @endphp
                     <li>
-                        <blockquote class="italic font-light text-gray-900 dark:text-white mb-4">{{ $magic->invocation }} <x-sup><a href=" #ref-{{ $refNumber }}">[{{ $refNumber }}]</a></x-sup>
+                        <blockquote class="italic font-light text-gray-900 dark:text-off-white mb-4">{{ $magic->invocation }} <x-sup><a href=" #ref-{{ $refNumber }}">[{{ $refNumber }}]</a></x-sup>
                         </blockquote>
                     </li>
                     @endif
@@ -351,7 +351,7 @@
             <x-section-info title="References">
                 <ol class="list-decimal pl-5 space-y-2">
                     @foreach ($references as $reference => $data)
-                    <li id="ref-{{ $data['index'] }}" class="text-sm text-gray-600">
+                    <li id="ref-{{ $data['index'] }}" class="text-sm blue-icon">
                         @if($data['url'])
                         <a href="{{ $data['url'] }}" target="_blank">{{ $reference }}</a>
                         @else

@@ -10,7 +10,7 @@ class StarController extends Controller
     public function index()
     {
         return view('stars.stargate', [
-            'stars' => Star::simplePaginate(30)
+            'stars' => Star::paginate(30)
         ]);
     }
 

@@ -1,9 +1,11 @@
-<div class="flex px-4 py-6 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0 items-center">
-    <dt class="{{ $titleClass ?? 'text-purple text-sm/6 font-medium text-white-900 underline sm:no-underline capitalize' }}">
-        {{ $title }}
+<div class="flex px-4 py-6 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0 items-center justify-between">
+    <dt class="{{ $titleClass ?? 'text-purple text-sm/6 font-medium dark:text-off-white underline sm:no-underline capitalize' }}">
+         <a href="{{ $linkUrl ?? '#' }}" target="_blank">
+            {{ $title }}
+        </a>
     </dt>
 
-    <dd class="mt-1 text-sm/6 text-white-700 sm:col-span-2 sm:mt-0">
+    <dd class="mt-1 text-sm/6 text-white-700 sm:col-span-2 sm:mt-0 dark:text-off-white">
         {{ $slot }}
     </dd>
 

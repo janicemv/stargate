@@ -1,1 +1,1 @@
-<span class="bg-purple text-white inline-block text-xs font-medium me-2 px-2.5 py-0.5 mb-2 rounded dark:bg-purple dark:text-purple">{{ $slot }}</span>
+<span class="bg-purple text-white dark:bg-purple-medium dark:text-off-white inline-block text-xs font-medium me-2 px-2.5 py-2 mb-2 rounded">{{ $slot }}</span>
