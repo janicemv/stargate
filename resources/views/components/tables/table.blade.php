@@ -4,7 +4,7 @@
             <div class="border rounded-lg overflow-hidden">
 
                 <table
-                    {{ $attributes->merge(['class' => 'table-auto min-w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-light']) }}>
+                    {{ $attributes->merge(['class' => 'table-auto min-w-full text-sm text-left rtl:text-right']) }}>
                     {{ $slot }}
                 </table>
             </div>

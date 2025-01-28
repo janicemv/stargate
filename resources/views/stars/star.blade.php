@@ -8,10 +8,4 @@
 
     <x-stars.magic :star="$star" />
 
-    
-
-    </div>
-
-
-
 </x-layout>
