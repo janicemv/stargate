@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Star extends Model
@@ -45,4 +47,14 @@ class Star extends Model
     {
         return $this->hasMany(StarMagic::class)->where('type', 'behenian');;
     }
+
+    // slug: create field in db table
+    // public function sluggable(): array
+    // {
+    //     return [
+    //         'slug' => [
+    //             'source' => ['name']
+    //         ]
+    //     ];
+    // }
 }

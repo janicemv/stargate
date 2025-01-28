@@ -15,7 +15,6 @@
                     <tr>
                         <x-tables.th>Name</x-tables.th>
                         <x-tables.th-hidden>Designation</x-tables.th-hidden>
-                        <x-tables.th>Constellation</x-tables.th>
                         <x-tables.th-hidden>HIP</x-tables.th-hidden>
                         <x-tables.th-hidden>Magnitude</x-tables.th-hidden>
                         <x-tables.th-hidden>Ascension</x-tables.th-hidden>
@@ -28,9 +27,6 @@
                             <x-tables.td><a class="font-bold hover:underline"
                                     href="/star/{{ $star->id }}">{{ $star->name }}</a></x-tables.td>
                             <x-tables.td-hidden>{{ $star->iau_desig }}</x-tables.td-hidden>
-                            <x-tables.td><a href="/constellations/{{ $star->constellation->id }}"
-                                    class="text-blue-500 hover:underline"> {{ $star->constellation->name }}
-                                </a></x-tables.td>
                             <x-tables.td-hidden>{{ $star->iau_HIP }}</x-tables.td-hidden>
                             <x-tables.td-hidden>{{ $star->Vmag }}</x-tables.td-hidden>
                             <x-tables.td-hidden>{{ $star->RA_J2000 }}</x-tables.td-hidden>

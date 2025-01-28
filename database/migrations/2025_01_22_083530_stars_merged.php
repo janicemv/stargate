@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('iau_HIP')->nullable();
             $table->text('hash')->nullable();
             $table->text('WDS_J')->nullable();
-            $table->text('Vmag')->nullable();
+            $table->float('Vmag')->nullable();
             $table->float('RA_J2000')->nullable();
             $table->float('Dec_J2000')->nullable();
             $table->text('BayerId')->nullable();

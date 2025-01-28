@@ -1,7 +1,6 @@
 <x-layout>
     <x-page-heading>{{ $star->name }}</x-page-heading>
 
-
     <x-section>
         <x-section-title>Official IAU Information</x-section-title>
 

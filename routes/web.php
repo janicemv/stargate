@@ -20,7 +20,6 @@ Route::get('/star/{star}', [StarController::class, 'show']);
 Route::get('/constellations', [ConstellationController::class, 'index']);
 Route::get('/constellations/{constellation}', [ConstellationController::class, 'show']);
 
-
 Route::get('/about', function () {
     return view('about');
 });
