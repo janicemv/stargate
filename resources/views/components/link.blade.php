@@ -1,1 +1,1 @@
-<a class="text-purple font-bold hover:font-extrabold hover:underline  dark:text-off-white" target="_blank" {{ $attributes }}>{{ $slot }}</a>
+<a class="text-purple font-bold hover:font-extrabold hover:underline dark:text-off-white" target="_blank" {{ $attributes }}>{{ $slot }}</a>

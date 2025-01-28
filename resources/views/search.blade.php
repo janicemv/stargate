@@ -14,7 +14,6 @@
     @if (request()->has('q'))
     <x-page-heading>Search Result of "{{ $q }}"</x-page-heading>
 
-        <x-round-container>
 
 
             @if ($stars->isNotEmpty())
@@ -76,7 +75,6 @@
                     </x-tables.table>
                 </x-section>
             @endif
-        </x-round-container>
 
     @endif
 

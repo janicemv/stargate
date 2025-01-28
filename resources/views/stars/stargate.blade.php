@@ -21,6 +21,8 @@
                                 @endif
                             </a>
                         </x-tables.th>
+                        <x-tables.th>Bayer ID</x-tables.th>
+
                         <x-tables.th>
                             <a
                                 href="{{ url('/stargate?sort=constellation_id&direction=' . ($sortColumn == 'constellation_id' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
@@ -31,10 +33,18 @@
                             </a>
                         </x-tables.th>
 
-                        <x-tables.th-hidden>Designation</x-tables.th-hidden>
+                        <x-tables.th-hidden>
+                            <a
+                                href="{{ url('/stargate?sort=iau_desig&direction=' . ($sortColumn == 'iau_desig' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
+                                Designation
+                                @if ($sortColumn == 'iau_desig')
+                                    <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
+                                @endif
+                            </a>
+                        </x-tables.th-hidden>
 
 
-                        <x-tables.th>
+                        <x-tables.th-hidden>
                             <a
                                 href="{{ url('/stargate?sort=iau_HIP&direction=' . ($sortColumn == 'iau_HIP' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
                                 HIP
@@ -42,9 +52,9 @@
                                     <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
                                 @endif
                             </a>
-                        </x-tables.th>
+                        </x-tables.th-hidden>
 
-                        <x-tables.th>
+                        <x-tables.th-hidden>
                             <a
                                 href="{{ url('/stargate?sort=Vmag&direction=' . ($sortColumn == 'Vmag' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
                                 Magnitude
@@ -52,9 +62,9 @@
                                     <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
                                 @endif
                             </a>
-                        </x-tables.th>
+                        </x-tables.th-hidden>
 
-                        <x-tables.th>
+                        <x-tables.th-hidden>
                             <a
                                 href="{{ url('/stargate?sort=RA_J2000&direction=' . ($sortColumn == 'RA_J2000' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
                                 Ascension
@@ -62,9 +72,9 @@
                                     <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
                                 @endif
                             </a>
-                        </x-tables.th>
+                        </x-tables.th-hidden>
 
-                        <x-tables.th>
+                        <x-tables.th-hidden>
                             <a
                                 href="{{ url('/stargate?sort=Dec_J2000&direction=' . ($sortColumn == 'Dec_J2000' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
                                 Declination
@@ -72,7 +82,7 @@
                                     <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
                                 @endif
                             </a>
-                        </x-tables.th>
+                        </x-tables.th-hidden>
                     </tr>
                 </x-tables.thead>
                 <tbody>
@@ -80,6 +90,8 @@
                         <x-tables.tr>
                             <x-tables.td><a class="font-bold hover:underline"
                                     href="/star/{{ $star->id }}">{{ $star->name }}</a></x-tables.td>
+                            <x-tables.td>{{ $star->BayerId }}</x-tables.td>
+
                             <x-tables.td><a href="/constellations/{{ $star->constellation->id }}"
                                     class="text-blue-500 hover:underline"> {{ $star->constellation->name }}
                                 </a></x-tables.td>
