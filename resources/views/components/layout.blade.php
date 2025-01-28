@@ -27,7 +27,7 @@
                 <!-- Desktop menu -->
                 <div class="hidden lg:flex space-x-6 font-bold">
                     <x-navlink href="/about" :active="request()->is('about')">About</x-navlink>
-                    <x-navlink href="/" :active="request()->is('/videos')">Videos</x-navlink>
+                    {{-- <x-navlink href="/" :active="request()->is('/videos')">Videos</x-navlink> --}}
                     <x-navlink href="/stargate" :active="request()->is('stargate')">Stars</x-navlink>
                     <x-navlink href="/constellations" :active="request()->is('constellations')">Constellations</x-navlink>
                     <x-navlink href="/references" :active="request()->is('references')">References</x-navlink>
@@ -35,6 +35,11 @@
                 <!-- Auth links, Dark Mode button, and Mobile menu button -->
                 <div class="flex items-center space-x-6">
                     <div class="hidden lg:flex items-center space-x-6">
+                        {{-- Searchbar --}}
+                        <x-forms.form action="/search" class="mx-5">
+                            <x-forms.input :label="false" name="q" placeholder="Search" />
+                        </x-forms.form>
+                        {{-- auth --}}
                         @auth
                         <x-navlink href="/dashboard">Dashboard</x-navlink>
                         <form method="POST" action="/logout">
@@ -68,10 +73,11 @@
             <div id="mobile-menu" class="hidden lg:hidden py-4">
                 <div class="flex flex-col space-y-4 font-bold">
                     <x-navlink href="/about" :active="request()->is('about')">About</x-navlink>
-                    <x-navlink href="/" :active="request()->is('/videos')">Videos</x-navlink>
+                    {{-- <x-navlink href="/" :active="request()->is('/videos')">Videos</x-navlink> --}}
                     <x-navlink href="/stargate" :active="request()->is('stargate')">Stars</x-navlink>
                     <x-navlink href="/constellations" :active="request()->is('constellations')">Constellations</x-navlink>
                     <x-navlink href="/references" :active="request()->is('references')">References</x-navlink>
+                    <x-navlink href="/searchpage" :active="request()->is('search')">Search</x-navlink>
                     @auth
                     <x-navlink href="/dashboard">Dashboard</x-navlink>
                     <form method="POST" action="/logout">

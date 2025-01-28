@@ -17,7 +17,7 @@
 
             @if ($constellation->stars->isNotEmpty())
 
-            <x-card-list title="{{ $constellation->name }} Stars" link="/constellations/{{ $constellation->id }}" linkText="View all">
+            <x-card-list title="{{ $constellation->abbrev }} Stars" link="/constellations/{{ $constellation->id }}" linkText="View all">
                 @foreach ($constellation->stars as $star)
                 <x-card-list-item
                     :image="Vite::asset('resources/images/stars/sirius.svg')"

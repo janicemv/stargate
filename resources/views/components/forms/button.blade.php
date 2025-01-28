@@ -1,1 +1,1 @@
-<button {{ $attributes(['class' => 'bg-gray-light rounded py-2 px-6 font-bold']) }}>{{ $slot }}</button>
+<button {{ $attributes(['class' => 'bg-purple text-off-white rounded-md py-2 px-6 font-bold dark:bg-blue-light']) }}>{{ $slot }}</button>

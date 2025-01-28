@@ -11,14 +11,12 @@ class SearchController extends Controller
     public function stars()
     {
         $stars = Star::where('name', 'LIKE', '%' . request('q') . '%')->get();
+        $constellations = Constellation::where('name', 'LIKE', '%' . request('q') . '%')
+            ->orWhere('abbrev', 'LIKE', '%' . request('q') . '%')
+            ->get();
 
-        return view('stars.results', ['stars' => $stars, 'q' => request('q')]);
-    }
 
-    public function constellations()
-    {
-        $constellations = Constellation::where('constellation', 'LIKE', '%' . request('q') . '%')->get();
 
-        return view('constellation.results', ['constellations' => $constellations]);
+        return view('stars.results', ['stars' => $stars, 'constellations' => $constellations, 'q' => request('q')]);
     }
 }

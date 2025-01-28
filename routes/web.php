@@ -12,6 +12,7 @@ Route::get('/', function () {
 
 Route::get('/search', [SearchController::class, 'stars']);
 
+
 Route::get('/stargate', [StarController::class, 'index']);
 Route::get('/star/{star}', [StarController::class, 'show']);
 
@@ -26,6 +27,10 @@ Route::get('/about', function () {
 
 Route::get('/references', function () {
     return view('references');
+});
+
+Route::get('/searchpage', function () {
+    return view('searchpage');
 });
 
 
