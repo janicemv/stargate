@@ -1,0 +1,1 @@
+<tr class="bg-white border-b dark:bg-purple dark:border-gray hover:bg-gray-50 dark:hover:bg-gray">{{ $slot }} </tr>

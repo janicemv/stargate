@@ -1,4 +1,4 @@
-<li class="py-1 sm:py-1">
+<li class="py-1 sm:py-1 mx-4 lg:mx-1">
     <div class="flex items-center">
         <div class="flex-shrink-0">
             <i class="fa-solid fa-star text-sm"></i>        
@@ -6,7 +6,7 @@
         <div class="flex-1 min-w-0 ms-4">
             <p class="text-xs font-medium  truncate dark:text-white">
                 {{ $name }}
-                <span class="text-xstruncate text-blue-light">{{ $code }}</span>
+                <span class="text-xs truncate text-blue-light">{{ $code }}</span>
             </p>
         </div>
         <div class="inline-flex items-center text-base font-semibold dark:text-purple-light">
