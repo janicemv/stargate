@@ -16,12 +16,12 @@
             </div>
         {{-- end searchbar --}}
             <div class="text-center">
-                <h1 class="text-balance text-5xl font-extrabold tracking-tight text-gray-900 uppercase">Your virtual
+                <h1 class="text-balance text-5xl font-extrabold tracking-tight uppercase">Your virtual
                     Stargate</h1>
-                <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8"> Discover a comprehensive
+                <p class="mt-8 text-pretty text-lg font-medium  sm:text-xl/8"> Discover a comprehensive
                     database of Stars and Constellations, featuring astronomical data alongside their cultural, magical,
                     spiritual, and historical connections. </p>
-                <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">Explore the universe like
+                <p class="mt-8 text-pretty text-lg font-medium  sm:text-xl/8">Explore the universe like
                     never before!</p>
                 <div class="mt-10 flex items-center justify-center gap-x-6">
                     <a href="/about" class="text-sm font-semibold text-blue-medium">Learn more <span

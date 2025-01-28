@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="pb-20 dark:bg-purple dark:text-white">
+<body class="pb-20 bg-off-white dark:bg-purple dark:text-white">
 
     <!-- Menu -->
     <div class="sticky w-full z-50 top-0 left-0">
