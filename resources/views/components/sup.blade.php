@@ -1,1 +1,1 @@
-<sup class="font-features sups text-blue-medium">{{ $slot }}</sup>
+<sup class="font-features sups text-blue-medium dark:text-blue-light">{{ $slot }}</sup>

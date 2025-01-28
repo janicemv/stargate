@@ -21,7 +21,7 @@ export default {
         colors: {
             'blue': '#200F8C',
             'blue-medium': '#355B8C',
-            'blue-light': '#515EA6',
+            'blue-light': '#b4bef5',
             'purple': '#1e0741',
             'purple-medium': '#382B8C',
             'purple-light': '#dec9fc',

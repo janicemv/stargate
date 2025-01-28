@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('angel')->nullable();
             $table->string('colors')->nullable();
             $table->string('invocation')->nullable();
+            $table->text('additional_info')->nullable();
             $table->text('magic')->nullable();
             $table->text('reference');
             $table->text('url')->nullable();

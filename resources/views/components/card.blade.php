@@ -1,4 +1,4 @@
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-purple dark:border-gray h-full">
+<div class="max-w-sm border border-gray-200 rounded-lg shadow dark:border-gray h-full hover:bg-blue-light dark:hover:bg-blue-light hover:text-purple">
     <div class="text-center">
         {{ $header }}
     </div>

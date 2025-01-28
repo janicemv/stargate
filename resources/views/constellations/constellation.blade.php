@@ -1,5 +1,5 @@
 <x-layout>
-    <x-page-heading>{{ $constellation->constellation}}</x-page-heading>
+    <x-page-heading>{{ $constellation->name}}</x-page-heading>
 
 
     <x-section>
