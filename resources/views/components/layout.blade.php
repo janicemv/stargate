@@ -18,7 +18,7 @@
     <!-- Menu -->
     <div class="sticky w-full z-50 top-0 left-0">
         <div class="bg-purple text-white px-4 sm:px-6 lg:px-8 border-b border-gray">
-            <nav class="flex justify-between items-center py-4">
+            <nav class="flex justify-center items-center py-4">
                 <div class="flex items-center">
                     <a href="/" class="mr-4">
                         <img src="{{ Vite::asset('resources/images/logo-full-white.svg') }}" alt="" id="logo" class="h-8">
@@ -36,7 +36,7 @@
                 <div class="flex items-center space-x-6">
                     <div class="hidden lg:flex items-center space-x-6">
                         {{-- Searchbar --}}
-                        <x-forms.form action="/search" class="mx-5">
+                        <x-forms.form action="/search" class="mx-5 px-5 py-4">
                             <x-forms.input :label="false" name="q" placeholder="Search" />
                         </x-forms.form>
                         {{-- auth --}}

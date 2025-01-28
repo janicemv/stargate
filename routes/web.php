@@ -10,7 +10,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/search', [SearchController::class, 'stars']);
+Route::get('/search', [SearchController::class, 'search']);
 
 
 Route::get('/stargate', [StarController::class, 'index']);

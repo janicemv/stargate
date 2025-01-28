@@ -10,7 +10,7 @@
         {{-- Searchbar --}}
         <div class="mx-auto max-w-2xl py-15 sm:py-15 lg:py-20">
             <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                <x-forms.form action="/search" class="mt-6">
+                <x-forms.form action="/search" class="mt-6 px-5 py-4">
                     <x-forms.input :label="false" name="q" placeholder="Search" />
                 </x-forms.form>
             </div>

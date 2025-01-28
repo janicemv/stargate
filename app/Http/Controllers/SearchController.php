@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function stars()
+    public function search()
     {
         $stars = Star::where('name', 'LIKE', '%' . request('q') . '%')->get();
         $constellations = Constellation::where('name', 'LIKE', '%' . request('q') . '%')
@@ -17,6 +17,6 @@ class SearchController extends Controller
 
 
 
-        return view('stars.results', ['stars' => $stars, 'constellations' => $constellations, 'q' => request('q')]);
+        return view('search', ['stars' => $stars, 'constellations' => $constellations, 'q' => request('q')]);
     }
 }
