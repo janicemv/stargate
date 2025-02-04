@@ -16,7 +16,6 @@ class StarMagicSeeder extends Seeder
         $data = [
             [
                 'star_id' => 61,
-                'type' => 'behenian',
                 'planets' => 'Mars, Jupiter',
                 'metals' => 'Iron',
                 'gemstones' => 'Jasper',
@@ -29,7 +28,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 16,
-                'type' => 'behenian',
                 'planets' => 'Venus, Mars',
                 'metals' => 'Iron',
                 'gemstones' => 'Ruby',
@@ -42,7 +40,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 31,
-                'type' => 'behenian',
                 'planets' => 'Saturn, Jupiter',
                 'metals' => 'Lead',
                 'gemstones' => 'Diamond',
@@ -55,7 +52,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 39,
-                'type' => 'behenian',
                 'planets' => 'Venus, Moon',
                 'metals' => 'Silver, Copper',
                 'gemstones' => 'Magnetite',
@@ -68,7 +64,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 32,
-                'type' => 'behenian',
                 'planets' => 'Mars, Saturn',
                 'metals' => 'Silver or Lead',
                 'gemstones' => 'Onyx',
@@ -81,7 +76,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 55,
-                'type' => 'behenian',
                 'planets' => 'Jupiter, Mars',
                 'metals' => 'Iron',
                 'gemstones' => 'Amethyst',
@@ -94,7 +88,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 124,
-                'type' => 'behenian',
                 'planets' => 'Jupiter, Saturn',
                 'metals' => 'Tin',
                 'gemstones' => 'Sapphire',
@@ -107,7 +100,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 477,
-                'type' => 'behenian',
                 'planets' => 'Saturn, Mercury',
                 'metals' => 'Lead',
                 'gemstones' => 'Chalcedony',
@@ -120,7 +112,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 45,
-                'type' => 'behenian',
                 'planets' => 'Venus, Mars',
                 'metals' => 'Copper',
                 'gemstones' => 'Topaz',
@@ -133,7 +124,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 15,
-                'type' => 'behenian',
                 'planets' => 'Moon, Mars',
                 'metals' => 'Mercury',
                 'gemstones' => 'Quartz, diodocus',
@@ -146,7 +136,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 330,
-                'type' => 'behenian',
                 'planets' => 'Mercury, Mars',
                 'metals' => 'Mercury',
                 'gemstones' => 'Agate',
@@ -159,7 +148,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 354,
-                'type' => 'behenian',
                 'planets' => 'Jupiter, Mars',
                 'metals' => 'Iron',
                 'gemstones' => 'Garnet, Granite',
@@ -172,7 +160,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 399,
-                'type' => 'behenian',
                 'planets' => 'Cancer, Venus',
                 'metals' => 'Silver',
                 'gemstones' => 'Beryl',
@@ -185,7 +172,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 404,
-                'type' => 'behenian',
                 'planets' => 'Venus, Mercury',
                 'metals' => 'Copper',
                 'gemstones' => 'Emerald',
@@ -198,7 +184,6 @@ class StarMagicSeeder extends Seeder
             ],
             [
                 'star_id' => 435,
-                'type' => 'behenian',
                 'planets' => 'Venus, Mercury',
                 'metals' => 'Tin',
                 'gemstones' => 'Chrysolite',

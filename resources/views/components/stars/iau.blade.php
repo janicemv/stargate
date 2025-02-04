@@ -22,7 +22,7 @@
         </x-section-info>
 
         <x-section-info title="Constellation">
-            <a class="font-bold hover:underline" href="/constellations/{{ $star->constellation->id }}}">
+            <a class="font-bold hover:underline" href="/constellations/{{ $star->constellation->name }}">
                 {{ $star->constellation->name }}
             </a> </x-section-info>
 

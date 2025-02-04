@@ -52,14 +52,55 @@ themeToggleBtn.addEventListener("click", function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
-    console.log(mobileMenuButton);
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (mobileMenuButton) {
 
     mobileMenuButton.addEventListener('click', () => {
-        console.log('button clicked');
         mobileMenu.classList.toggle('hidden');
     });
 }
+});
+
+//Create form
+document.querySelectorAll('input[name="info_type"]').forEach((radio) => {
+    radio.addEventListener('change', function() {
+        document.getElementById('astronomy-form').style.display = 'none';
+        document.getElementById('name-form').style.display = 'none';
+        document.getElementById('magic-form').style.display = 'none';
+        document.getElementById('keywords-form').style.display = 'none';
+
+        if (this.value === 'astronomy') {
+            document.getElementById('astronomy-form').style.display = 'block';
+        } else if (this.value === 'name') {
+            document.getElementById('name-form').style.display = 'block';
+        } else if (this.value === 'magic') {
+            document.getElementById('magic-form').style.display = 'block';
+        } else if (this.value === 'keywords') {
+            document.getElementById('keywords-form').style.display = 'block';
+        }
+    });
+});
+
+document.getElementById('info-type-astronomy').checked = true; 
+document.getElementById('astronomy-form').style.display = 'block'; 
+
+// Add keywords to form
+document.getElementById('add-keywords-btn').addEventListener('click', function() {
+    const keywordsInput = document.getElementById('keywords');
+    const keywords = keywordsInput.value.trim().split(',').map(keyword => keyword.trim()).filter(keyword => keyword);
+
+    if (keywords.length > 0) {
+        const keywordsList = document.getElementById('keywords-list');
+
+        keywords.forEach(keyword => {
+            const keywordItem = document.createElement('div');
+            keywordItem.textContent = keyword;
+            keywordsList.appendChild(keywordItem);
+        });
+
+        // Atualiza o campo escondido com os valores das palavras-chave
+        document.querySelector('input[name="keywords"]').value = keywords.join(',');
+        keywordsInput.value = ''; // Limpa o campo de input
+    }
 });

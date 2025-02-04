@@ -12,19 +12,19 @@
                     alt="{{ $constellation->name }}"
                     title="{{ $constellation->name }}"
                     subtitle="{{ $constellation->abbrev }}"
-                    link="/constellations/{{ $constellation->id }}" />
+                    link="/constellations/{{ $constellation->name }}" />
             </x-slot>
 
             @if ($constellation->stars->isNotEmpty())
 
-            <x-card-list title="{{ $constellation->abbrev }} Stars" link="/constellations/{{ $constellation->id }}" linkText="View all">
+            <x-card-list title="{{ $constellation->abbrev }} Stars" link="/constellations/{{ $constellation->name }}" linkText="View all">
                 @foreach ($constellation->stars as $star)
                 <x-card-list-item
                     :image="Vite::asset('resources/images/stars/sirius.svg')"
                     alt="{{ $star->name }}"
                     name="{{ $star->name }}"
                     code="{{ $star->iau_desig }}"
-                    link="/star/{{ $star->id }}" />
+                    link="/star/{{ $star->name }}" />
                 @endforeach
         
           
@@ -33,7 +33,7 @@
             @endif
 
             <x-slot name="footer">
-                <x-card-footer link="/constellations/{{ $constellation->id }}" text="Read more" />
+                <x-card-footer link="/constellations/{{ $constellation->name }}" text="Read more" />
             </x-slot>
         </x-card>
 

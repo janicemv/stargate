@@ -14,11 +14,14 @@ Route::get('/search', [SearchController::class, 'search']);
 
 
 Route::get('/stargate', [StarController::class, 'index']);
-Route::get('/star/{star}', [StarController::class, 'show']);
+Route::get('/star/{star:name}', [StarController::class, 'show']);
+Route::get('stars/create', [StarController::class, 'create'])->middleware('auth');
+Route::post('stars', [StarController::class, 'store'])->middleware('auth');
+
 
 
 Route::get('/constellations', [ConstellationController::class, 'index']);
-Route::get('/constellations/{constellation}', [ConstellationController::class, 'show']);
+Route::get('/constellations/{constellation:name}', [ConstellationController::class, 'show']);
 
 Route::get('/about', function () {
     return view('about');

@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('star_magics', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Star::class);
-            $table->string('type');
             $table->string('planets')->nullable();
             $table->string('metals')->nullable();
             $table->string('gemstones')->nullable();

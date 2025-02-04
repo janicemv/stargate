@@ -89,10 +89,10 @@
                     @foreach ($stars as $star)
                         <x-tables.tr>
                             <x-tables.td><a class="font-bold hover:underline"
-                                    href="/star/{{ $star->id }}">{{ $star->name }}</a></x-tables.td>
+                                    href="/star/{{ $star->name }}">{{ $star->name }}</a></x-tables.td>
                             <x-tables.td>{{ $star->BayerId }}</x-tables.td>
 
-                            <x-tables.td><a href="/constellations/{{ $star->constellation->id }}"
+                            <x-tables.td><a href="/constellations/{{ $star->constellation->name }}"
                                     class="text-blue-500 hover:underline"> {{ $star->constellation->name }}
                                 </a></x-tables.td>
                             <x-tables.td-hidden>{{ $star->iau_desig }}</x-tables.td-hidden>

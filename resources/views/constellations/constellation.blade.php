@@ -25,7 +25,7 @@
                     @foreach ($constellation->stars as $star)
                         <x-tables.tr>
                             <x-tables.td><a class="font-bold hover:underline"
-                                    href="/star/{{ $star->id }}">{{ $star->name }}</a></x-tables.td>
+                                    href="/star/{{ $star->name }}">{{ $star->name }}</a></x-tables.td>
                             <x-tables.td-hidden>{{ $star->iau_desig }}</x-tables.td-hidden>
                             <x-tables.td-hidden>{{ $star->iau_HIP }}</x-tables.td-hidden>
                             <x-tables.td-hidden>{{ $star->Vmag }}</x-tables.td-hidden>

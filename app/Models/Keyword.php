@@ -8,13 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Keyword extends Model
 {
+
     public function starMagic(): BelongsToMany
     {
         return $this->belongsToMany(StarMagic::class);
-    }
-
-    public function constellations(): BelongsToMany
-    {
-        return $this->belongsToMany(ConstellationMagic::class);
     }
 }

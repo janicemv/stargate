@@ -45,16 +45,6 @@ class Star extends Model
 
     public function behenians()
     {
-        return $this->hasMany(StarMagic::class)->where('type', 'behenian');;
+        return $this->hasMany(StarMagic::class)->whereIn('id', [15, 16, 31, 32, 39, 45, 55, 61, 124, 330, 354, 399, 404, 435, 477]);
     }
-
-    // slug: create field in db table
-    // public function sluggable(): array
-    // {
-    //     return [
-    //         'slug' => [
-    //             'source' => ['name']
-    //         ]
-    //     ];
-    // }
 }
