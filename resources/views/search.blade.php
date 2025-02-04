@@ -26,7 +26,7 @@
                         <x-tables.thead>
                             <tr>
                                 <x-tables.th>Name</x-tables.th>
-                                <x-tables.th>Bayer ID</x-tables.th>
+                                <x-tables.th-hidden>Bayer ID</x-tables.th>
                                 <x-tables.th>Constellation</x-tables.th>
                                 <x-tables.th-hidden>Designation</x-tables.th-hidden>
                                 <x-tables.th-hidden>HIP</x-tables.th-hidden>

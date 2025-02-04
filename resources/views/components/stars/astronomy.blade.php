@@ -13,6 +13,7 @@ $astroReferences = [];
 
    
     <x-round-container>
+        @if($star->names->isNotEmpty())
         <x-section-info title="Names">
             <ul class="list-star list-inside">
                 @foreach ($star->names as $name)
@@ -33,7 +34,9 @@ $astroReferences = [];
                 @endforeach
             </ul>
         </x-section-info>
+        @endif
 
+        @if($star->astronomy->isNotEmpty())
         @foreach($star->astronomy as $info)
         @if($info)
         <x-section-info title="{{ $info->type }}">
@@ -51,6 +54,7 @@ $astroReferences = [];
 
         @endif
         @endforeach
+        @endif
 
 
 
