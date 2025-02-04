@@ -38,10 +38,6 @@ Route::get('/references', function () {
     return view('references');
 });
 
-Route::get('/search', function () {
-    return view('search');
-});
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
