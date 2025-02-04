@@ -21,6 +21,13 @@ class Star extends Model
         return $this->hasMany(StarName::class);
     }
 
+    public function name(string $name): void
+    {
+        $name = StarName::firstOrCreate(['name' => $name]);
+
+        $this->names()->attach($name);
+    }
+
     public function starMagic()
     {
         return $this->hasMany(StarMagic::class);
@@ -40,11 +47,12 @@ class Star extends Model
     {
         $keyword = Keyword::firstOrCreate(['name' => $name]);
 
-        $this->keywords()->attach($keyword);
+        $this->keywords()->syncWithoutDetaching([$keyword->id]);
     }
 
-    public function behenians()
+
+    public function isBehenian(): bool
     {
-        return $this->hasMany(StarMagic::class)->whereIn('id', [15, 16, 31, 32, 39, 45, 55, 61, 124, 330, 354, 399, 404, 435, 477]);
+        return in_array($this->id, [15, 16, 31, 32, 39, 45, 55, 61, 124, 330, 354, 399, 404, 435, 477]);
     }
 }

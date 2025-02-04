@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Star;
+use App\Models\StarAstronomy;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Arr;
+use Illuminate\Validation\Rule;
 
 class StarController extends Controller
 {
@@ -30,99 +34,87 @@ class StarController extends Controller
         return view('stars.star', ['star' => $star]);
     }
 
-    public function create()
+    public function create($formType)
     {
         $stars = Star::all();
 
-        return view('stars.create', ['stars' => $stars]);
+        if ($formType === 'astro') {
+            return view('stars.createAstro', ['stars' => $stars]);
+        } elseif ($formType === 'name') {
+            return view('stars.createNames', ['stars' => $stars]);
+        } elseif ($formType === 'magic') {
+            return view('stars.createMagic', ['stars' => $stars]);
+        } elseif ($formType === 'keywords') {
+            return view('stars.createKeywords', ['stars' => $stars]);
+        } else {
+            abort(404);
+        }
     }
 
-    // public function store(Request $request)
-    // {
-    //     $validated = $request->validate([
-    //         'star_id' => 'required|exists:stars,id',
-    //         'info_type' => 'required|in:astronomy,name,magic,keywords',
-    //         'reference' => 'required|string',
-    //         // Adicione mais validações aqui dependendo do tipo de informação
-    //     ]);
-
-    //     // Verificar se o tipo de informação é 'magic' e pelo menos um campo foi preenchido
-    //     if ($validated['info_type'] === 'magic') {
-    //         $magicFields = [
-    //             'planets' => $request->input('planets'),
-    //             'metals' => $request->input('metals'),
-    //             'gemstones' => $request->input('gemstones'),
-    //             'plants' => $request->input('plants'),
-    //             'description' => $request->input('description'),
-    //             'angel' => $request->input('angel'),
-    //             'colors' => $request->input('colors'),
-    //             'invocation' => $request->input('invocation'),
-    //             'additional_info' => $request->input('additional_info'),
-    //             'magic' => $request->input('magic'),
-    //         ];
-
-    //         // Verifique se ao menos um campo foi preenchido
-    //         $isMagicFieldFilled = collect($magicFields)->contains(fn($value) => !empty($value));
-
-    //         if (!$isMagicFieldFilled) {
-    //             return back()->withErrors(['magic_fields' => 'Por favor, preencha ao menos um campo relacionado à magia.']);
-    //         }
-    //     }
-
-    //     // Encontre a estrela
-    //     $star = Star::findOrFail($validated['star_id']);
-
-    //     // Registra os dados dependendo do tipo de informação selecionado
-    //     switch ($validated['info_type']) {
-    //         case 'astronomy':
-    //             $star->astronomies()->create([
-    //                 'type' => $request->input('type'),
-    //                 'description' => $request->input('description'),
-    //                 'reference' => $validated['reference'],
-    //                 'url' => $request->input('url'),
-    //                 'user_id' => auth()->id(),
-    //             ]);
-    //             break;
-
-    //         case 'name':
-    //             $star->names()->create([
-    //                 'name' => $request->input('name'),
-    //                 'reference' => $validated['reference'],
-    //                 'user_id' => auth()->id(),
-    //             ]);
-    //             break;
-
-    //         case 'magic':
-    //             $star->magics()->create([
-    //                 'type' => $request->input('type'),
-    //                 'planets' => $request->input('planets'),
-    //                 'metals' => $request->input('metals'),
-    //                 'gemstones' => $request->input('gemstones'),
-    //                 'plants' => $request->input('plants'),
-    //                 'description' => $request->input('description'),
-    //                 'angel' => $request->input('angel'),
-    //                 'colors' => $request->input('colors'),
-    //                 'invocation' => $request->input('invocation'),
-    //                 'additional_info' => $request->input('additional_info'),
-    //                 'magic' => $request->input('magic'),
-    //                 'reference' => $validated['reference'],
-    //                 'url' => $request->input('url'),
-    //                 'user_id' => auth()->id(),
-    //             ]);
-    //             break;
-
-    //         case 'keywords':
-    //             $keywords = explode(',', $request->input('keywords')); // Supondo que as keywords sejam separadas por vírgula
-    //             foreach ($keywords as $keyword) {
-    //                 $star->keywords()->create([
-    //                     'name' => trim($keyword),
-    //                 ]);
-    //             }
-    //             break;
-    //     }
-
-    //     return redirect()->route('stars.show', $star->id)->with('success', 'Star information added successfully.');
-    // }
 
 
+    public function store(Request $request, $formType)
+    {
+        $star = Star::findOrFail($request->star_id);
+
+        if ($formType === 'astro') {
+            $attributes = $request->validate([
+                'star_id' => ['required', 'exists:stars,id'],
+                'type' => ['required'],
+                'description' => ['required'],
+                'reference' => ['required'],
+                'url' => ['nullable', 'active_url'],
+            ]);
+
+            $star->astronomy()->create(array_merge($attributes, [
+                'user_id' => Auth::user()->id,
+            ]));
+        } else if ($formType === 'name') {
+            $attributes = $request->validate([
+                'star_id' => ['required', 'exists:stars,id'],
+                'name' => ['required'],
+                'reference' => ['required'],
+                'url' => ['nullable', 'active_url'],
+
+            ]);
+
+            $star->names()->create(array_merge($attributes, [
+                'user_id' => Auth::user()->id,
+            ]));
+        } else if ($formType === 'magic') {
+
+            $attributes = $request->validate([
+                'star_id' => ['required', 'exists:stars,id'],
+                'planets' => ['nullable'],
+                'metals' => ['nullable'],
+                'gemstones' => ['nullable'],
+                'plants' => ['nullable'],
+                'description' => ['nullable'],
+                'angel' => ['nullable'],
+                'colors' => ['nullable'],
+                'invocation' => ['nullable'],
+                'additional_info' => ['nullable'],
+                'magic' => ['nullable'],
+                'reference' => ['required'],
+                'url' => ['nullable', 'active_url'],
+            ]);
+
+            $star->starMagic()->create(array_merge($attributes, [
+                'user_id' => Auth::user()->id,
+                'star_id' => $star->id,
+            ]));
+        } elseif ($formType === 'keywords') {
+            $attributes = $request->validate([
+                'star_id' => ['required', 'exists:stars,id'],
+                'keywords' => ['required'],
+            ]);
+
+            foreach (explode(',', $attributes['keywords']) as $keyword) {
+                $star->keyword(trim($keyword));
+            }
+        }
+
+
+        return redirect("/star/{$star->name}");
+    }
 }

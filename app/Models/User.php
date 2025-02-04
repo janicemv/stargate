@@ -46,19 +46,18 @@ class User extends Authenticatable
         ];
     }
 
+    public function stars()
+    {
+        return $this->hasMany(Star::class);
+    }
+
+    public function starAstronomy()
+    {
+        return $this->hasManyThrough(StarAstronomy::class, Star::class);
+    }
+
     public function starMagic()
     {
-        return $this->hasMany(StarMagic::class);
-    }
-
-    public function keywords()
-
-    {
-        return $this->hasMany(Keyword::class);
-    }
-
-    public function constellationMagic()
-    {
-        return $this->hasMany(ConstellationMagic::class);
+        return $this->hasManyThrough(StarMagic::class, Star::class);
     }
 }

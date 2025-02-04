@@ -1,6 +1,6 @@
 <!-- Astronomy -->
 
-@if ($star->astronomy->isNotEmpty())
+@if ($star->astronomy->isNotEmpty() || $star->names->isNotEmpty())
 
 @php
 $astroReferences = [];
@@ -11,11 +11,7 @@ $astroReferences = [];
 
     <x-section-title>Astronomical Information</x-section-title>
 
-    <x-text>@foreach($star->keywords as $keyword)
-        <x-tag>{{ $keyword->name }}</x-tag>
-        @endforeach
-    </x-text>
-
+   
     <x-round-container>
         <x-section-info title="Names">
             <ul class="list-star list-inside">

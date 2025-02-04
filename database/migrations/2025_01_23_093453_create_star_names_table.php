@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignIdFor(Star::class)->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->text('reference');
+            $table->text('url')->nullable();
             $table->foreignIdFor(User::class);
             $table->timestamps();
         });

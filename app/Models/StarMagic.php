@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class StarMagic extends Model
 {
-    function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
 
     function star()
     {

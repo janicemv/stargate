@@ -11,11 +11,6 @@ class StarAstronomy extends Model
     /** @use HasFactory<\Database\Factories\StarAstronomyFactory> */
     use HasFactory;
 
-    function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-
     function star(): BelongsTo
     {
         return $this->belongsTo(Star::class);

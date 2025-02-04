@@ -1,0 +1,1 @@
+<span class="inline-flex text-base font-semibold hover:text-purple">{{ $slot }} </span>

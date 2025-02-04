@@ -15,8 +15,15 @@ Route::get('/search', [SearchController::class, 'search']);
 
 Route::get('/stargate', [StarController::class, 'index']);
 Route::get('/star/{star:name}', [StarController::class, 'show']);
-Route::get('stars/create', [StarController::class, 'create'])->middleware('auth');
-Route::post('stars', [StarController::class, 'store'])->middleware('auth');
+
+Route::get('stars/create/{formType}', [StarController::class, 'create'])->middleware('auth');
+
+Route::post('stars/store/{formType}', [StarController::class, 'store'])->middleware('auth');
+
+// Route::post('stars-astro', [StarController::class, 'storeAstro'])->middleware('auth');
+// Route::post('stars-names', [StarController::class, 'storeNames'])->middleware('auth');
+// Route::post('stars-magic', [StarController::class, 'storeMagic'])->middleware('auth');
+
 
 
 
@@ -31,8 +38,8 @@ Route::get('/references', function () {
     return view('references');
 });
 
-Route::get('/searchpage', function () {
-    return view('searchpage');
+Route::get('/search', function () {
+    return view('search');
 });
 
 

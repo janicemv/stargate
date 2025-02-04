@@ -11,11 +11,13 @@
 
     <x-section-title>Magical Correspondences</x-section-title>
 
+    @if($star->keywords->isNotEmpty())
     <x-text>
         @foreach ($star->keywords as $keyword)
             <x-tag>{{ $keyword->name }}</x-tag>
         @endforeach
     </x-text>
+    @endif
 
     <x-round-container>
 
@@ -23,7 +25,7 @@
             <img src="{{ Vite::asset('resources/images/stars/sirius.svg') }}" alt="" id="sirius">
         </x-section-info>
 
-        @if ($star->behenians)
+        @if ($star->isBehenian())
             <x-section-info title="Type">
                 {{ $star->name }} is a Behenian Star, one of Cornelius Agrippa's medieval stars.
             </x-section-info>

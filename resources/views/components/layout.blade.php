@@ -31,6 +31,8 @@
                     <x-navlink href="/stargate" :active="request()->is('stargate')">Stars</x-navlink>
                     <x-navlink href="/constellations" :active="request()->is('constellations')">Constellations</x-navlink>
                     <x-navlink href="/references" :active="request()->is('references')">References</x-navlink>
+                    <x-navlink href="/stars/create/astro" :active="request()->is('stars/createAstro')">Add Info</x-navlink>
+
                 </div>
                 <!-- Auth links, Dark Mode button, and Mobile menu button -->
                 <div class="flex items-center space-x-6">
@@ -78,6 +80,8 @@
                     <x-navlink href="/constellations" :active="request()->is('constellations')">Constellations</x-navlink>
                     <x-navlink href="/references" :active="request()->is('references')">References</x-navlink>
                     <x-navlink href="/searchpage" :active="request()->is('search')">Search</x-navlink>
+                    <x-navlink href="/stars/create/astro" :active="request()->is('stars/create')">Add Info</x-navlink>
+
                     @auth
                     <x-navlink href="/dashboard">Dashboard</x-navlink>
                     <form method="POST" action="/logout">
@@ -95,6 +99,41 @@
     </div>
 
     <!-- End menu -->
+    <div class="px-10">
+        <nav class="flex justify-between items-center py-4 border-b border-white/10">
+            <div>
+                <a href="/">
+                    <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="">
+                </a>
+            </div>
+
+            <div class="space-x-6 font-bold">
+                <a href="/">Jobs</a>
+                <a href="#">Careers</a>
+                <a href="#">Salaries</a>
+                <a href="#">Companies</a>
+            </div>
+
+            @auth
+                <div class="space-x-6 font-bold flex">
+                    <a href="/jobs/create">Post a Job</a>
+
+                    <form method="POST" action="/logout">
+                        @csrf
+                        @method('DELETE')
+
+                        <button>Log Out</button>
+                    </form>
+                </div>
+            @endauth
+
+            @guest
+                <div class="space-x-6 font-bold">
+                    <a href="/register">Sign Up</a>
+                    <a href="/login">Log In</a>
+                </div>
+            @endguest
+        </nav>
 
     <main class="max-w-[986px] mx-10 lg:mx-auto mt-4">
         {{ $slot }}
