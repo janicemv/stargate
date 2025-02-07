@@ -1,5 +1,8 @@
 <x-layout>
-    <x-page-heading>Add magical Data</x-page-heading>
+    <x-page-heading>Add Magical Data</x-page-heading>
+
+    <x-forms-error />
+
 
     <x-forms.form method="POST" action="/stars/store/magic">
         @csrf
@@ -19,6 +22,7 @@
                 @endforeach
             </datalist>
             <input type="hidden" name="star_id" id="star_id">
+
 
         </div>
 
