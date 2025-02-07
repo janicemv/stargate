@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('reference');
             $table->string('url')->nullable();
             $table->foreignIdFor(User::class);
+            $table->boolean('approved')->default('0');
             $table->timestamps();
         });
     }
