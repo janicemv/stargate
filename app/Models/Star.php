@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Star extends Model
 {
@@ -50,9 +51,23 @@ class Star extends Model
         $this->keywords()->syncWithoutDetaching([$keyword->id]);
     }
 
-
     public function isBehenian(): bool
     {
         return in_array($this->id, [15, 16, 31, 32, 39, 45, 55, 61, 124, 330, 354, 399, 404, 435, 477]);
+    }
+
+    public function symbols(): HasMany
+    {
+        return $this->hasMany(StarSymbol::class);
+    }
+
+    public function addSymbol(string $filePath): StarSymbol
+    {
+        return $this->symbols()->create(['path' => $filePath]);
+    }
+
+    public function removeSymbol(StarSymbol $symbol): bool
+    {
+        return $symbol->delete();
     }
 }

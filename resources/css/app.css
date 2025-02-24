@@ -38,3 +38,9 @@ margin: 1rem auto;
 .dark .blue-icon::marker {
     color: var(--blue-light); /* Adicione a cor desejada para o dark mode */
 }
+
+.star-glyph
+{
+    /* width: 30%; */
+    height: 63px;
+}

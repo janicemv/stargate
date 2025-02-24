@@ -21,9 +21,15 @@
 
     <x-round-container>
 
+        @if ($star->symbols())
         <x-section-info title="Stellar glyph">
-            <img src="{{ Vite::asset('resources/images/stars/sirius.svg') }}" alt="" id="sirius">
+            @foreach ($star->symbols as $symbol)
+            <div class="flex flex-wrap gap-4">
+                <img src="{{ Vite::asset('storage/app/public/stars/' . $symbol->path) }}" alt="Symbol of {{ $star->name }}" class="star-glyph">
+            </div>
+            @endforeach
         </x-section-info>
+        @endif
 
         @if ($star->isBehenian())
             <x-section-info title="Type">
