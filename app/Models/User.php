@@ -60,4 +60,9 @@ class User extends Authenticatable
     {
         return $this->hasManyThrough(StarMagic::class, Star::class);
     }
+
+    public function starSymbol()
+    {
+        return $this->hasManyThrough(StarSymbol::class, Star::class);
+    }
 }

@@ -35,6 +35,8 @@ export default {
             'gray-light': '#E1E1E1',
             'off-white': '#F2F2F2',
             'white': '#fff',
+            'red': '#FF0000',
+            'black': '#000',
           },
     },
 

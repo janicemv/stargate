@@ -15,4 +15,9 @@ class StarAstronomy extends Model
     {
         return $this->belongsTo(Star::class);
     }
+
+    function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }

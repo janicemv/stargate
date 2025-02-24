@@ -1,7 +1,7 @@
 <x-layout>
     <x-page-heading>Add Magical Data</x-page-heading>
 
-    <x-forms-error />
+    <x-forms.error />
 
 
     <x-forms.form method="POST" action="/stars/store/magic">

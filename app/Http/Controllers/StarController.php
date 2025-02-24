@@ -46,6 +46,8 @@ class StarController extends Controller
             return view('stars.createMagic', ['stars' => $stars]);
         } elseif ($formType === 'keywords') {
             return view('stars.createKeywords', ['stars' => $stars]);
+        } elseif ($formType === 'glyphs') {
+            return view('stars.createGlyphs', ['stars' => $stars]);
         } else {
             abort(404);
         }
@@ -112,9 +114,34 @@ class StarController extends Controller
             foreach (explode(',', $attributes['keywords']) as $keyword) {
                 $star->keyword(trim($keyword));
             }
+        } elseif ($formType === 'glyph') {
+            dd($request->all());
+
+            $attributes = $request->validate([
+                'star_id' => ['required', 'exists:stars,id'],
+                'glyph' => ['required', 'file', 'image', 'mimes:png', 'max:2048'],
+                'description' => ['required'],
+                'reference' => ['required'],
+                'url' => ['nullable', 'active_url'],
+            ]);
+
+            $path = null;
+            if ($request->hasFile('glyph')) {
+                $path = $request->file('glyph')->store('stars', 'public');
+            }
+
+            $star->symbols()->create([
+                'star_id'     => $request->star_id,
+                'path'        => $path,
+                'description' => $request->description,
+                'reference'   => $request->reference,
+                'url'         => $request->url,
+                'user_id'     => Auth::id(),
+            ]);
+
+
+
+            return redirect("/star/{$star->name}");
         }
-
-
-        return redirect("/star/{$star->name}");
     }
 }
