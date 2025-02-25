@@ -30,13 +30,17 @@ margin: 1rem auto;
     width: 72px;
 }
 
+.const-card-img  {
+    width: 81px;
+}
+
 .blue-icon::marker{
     color: var(--blue-medium);
     font-weight: 600;
 }
 
 .dark .blue-icon::marker {
-    color: var(--blue-light); /* Adicione a cor desejada para o dark mode */
+    color: var(--blue-light);
 }
 
 .star-glyph

@@ -32,5 +32,6 @@ class DatabaseSeeder extends Seeder
         $this->call(StarsMergedSeeder::class);
         $this->call(KeywordSeeder::class);
         $this->call(StarMagicSeeder::class);
+        $this->call(StarSymbolSeeder::class);
     }
 }

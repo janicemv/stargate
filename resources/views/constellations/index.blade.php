@@ -8,7 +8,7 @@
         <x-card>
             <x-slot name="header">
                 <x-card-header
-                    :image="Vite::asset('resources/images/stars/sirius.svg')"
+                    :image="Vite::asset('./storage/app/public/stars/sirius.png')"
                     alt="{{ $constellation->name }}"
                     title="{{ $constellation->name }}"
                     subtitle="{{ $constellation->abbrev }}"

@@ -16,7 +16,7 @@ class StarSymbolSeeder extends Seeder
         $data = [
             [
                 'star_id' => 61,
-                'path' => 'alcameth.png',
+                'path' => 'stars/alcameth.png',
                 'description' => "Agrippa's Sigil of Arcturus",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -24,7 +24,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 16,
-                'path' => 'aldebaran.png',
+                'path' => 'stars/aldebaran.png',
                 'description' => "Agrippa's Sigil of Aldebaran",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -32,7 +32,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 31,
-                'path' => 'algol.png',
+                'path' => 'stars/algol.png',
                 'description' => "Bodleian MS's Sigil of Algol",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -40,7 +40,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 31,
-                'path' => 'algol1.png',
+                'path' => 'stars/algol1.png',
                 'description' => "Agrippa's Sigil of Algol",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -48,7 +48,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 39,
-                'path' => 'alkaid.png',
+                'path' => 'stars/alkaid.png',
                 'description' => "Agrippa's Sigil of Alkaid",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -56,7 +56,15 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 32,
-                'path' => 'corvus.png',
+                'path' => 'stars/corvus.png',
+                'description' => "Agrippa's Sigil of the Wing of Corvus",
+                'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
+                'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
+                'user_id' => 1
+            ],
+            [
+                'star_id' => 176,
+                'path' => 'stars/corvus.png',
                 'description' => "Agrippa's Sigil of the Wing of Corvus",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -64,7 +72,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 55,
-                'path' => 'antares.png',
+                'path' => 'stars/antares.png',
                 'description' => "Agrippa's Sigil of Antares",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -72,7 +80,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 55,
-                'path' => 'west-watcher.png',
+                'path' => 'stars/west-watcher.png',
                 'description' => "Antares as the West Watcher",
                 'reference' => 'Aileen Daw, Agathos Athenodoros e Sky Zahara: A Magia das Estrelas - Princípios de Magia Estelar',
                 'url' => 'https://adharastarpath.wordpress.com/a-magia-das-estrelas-volume-1-principios-de-magia-estelar/',
@@ -80,7 +88,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 124,
-                'path' => 'capella.png',
+                'path' => 'stars/capella.png',
                 'description' => "Bodleian MS's Sigil of Capella",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -88,7 +96,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 477,
-                'path' => 'cauda-capricorni.png',
+                'path' => 'stars/cauda-capricorni.png',
                 'description' => "Agrippa's Sigil of Deneb Algedi",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -96,7 +104,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 477,
-                'path' => 'cauda-capricorni1.png',
+                'path' => 'stars/cauda-capricorni1.png',
                 'description' => "Bodleian MS's Sigil of Deneb Algedi",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -104,7 +112,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 45,
-                'path' => 'elpheia.png',
+                'path' => 'stars/elpheia.png',
                 'description' => "Agrippa's Sigil of Elpheia/Alphecca",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -112,7 +120,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 15,
-                'path' => 'pleiades.png',
+                'path' => 'stars/pleiades.png',
                 'description' => "Agrippa's Sigil of the Pleiades star cluster",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -120,7 +128,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 330,
-                'path' => 'procyon.png',
+                'path' => 'stars/procyon.png',
                 'description' => "Bodleian MS's Sigil of Procyon",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -128,7 +136,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 330,
-                'path' => 'procyon1.png',
+                'path' => 'stars/procyon1.png',
                 'description' => "Agrippa's Sigil of Procyon",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -136,7 +144,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 354,
-                'path' => 'cor-leonis.png',
+                'path' => 'stars/cor-leonis.png',
                 'description' => "Agrippa's Sigil of Regulus",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -144,7 +152,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 354,
-                'path' => 'cor-leonis1.png',
+                'path' => 'stars/cor-leonis1.png',
                 'description' => "Bodleian MS's Sigil of Regulus",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -152,7 +160,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 399,
-                'path' => 'sirius.png',
+                'path' => 'stars/sirius.png',
                 'description' => "Bodleian MS & Agrippa's Sigil of Sirius",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -160,7 +168,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 404,
-                'path' => 'spica.png',
+                'path' => 'stars/spica.png',
                 'description' => "Agrippa's Sigil of Spica",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -168,7 +176,7 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 404,
-                'path' => 'spica1.png',
+                'path' => 'stars/spica1.png',
                 'description' => "Bodleian MS's Sigil of Spica",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
@@ -176,10 +184,26 @@ class StarSymbolSeeder extends Seeder
             ],
             [
                 'star_id' => 435,
-                'path' => 'vega.png',
+                'path' => 'stars/vega.png',
                 'description' => "Bodleian MS & Agrippa's Sigil of Vega",
                 'reference' => 'Christopher Warnock: Fixed Star, Sign and Constellation Magic',
                 'url' => 'https://books.google.be/books?id=oniIDwAAQBAJ&lpg=PP3&pg=PP3#v=onepage&q&f=false',
+                'user_id' => 1
+            ],
+            [
+                'star_id' => 171,
+                'path' => 'stars/fomalhaut.png',
+                'description' => "Aileen Daw's Stellar glyph of Fomalhaut",
+                'reference' => 'Aileen Daw, Agathos Athenodoros e Sky Zahara: A Magia das Estrelas - Princípios de Magia Estelar',
+                'url' => 'https://adharastarpath.wordpress.com/a-magia-das-estrelas-volume-1-principios-de-magia-estelar/',
+                'user_id' => 1
+            ],
+            [
+                'star_id' => 458,
+                'path' => 'stars/draco.png',
+                'description' => "Aileen Daw's Stellar glyph of Thuban and Draco",
+                'reference' => 'Personal connection of the author',
+                'url' => 'https://adharastarpath.wordpress.com/',
                 'user_id' => 1
             ]
         ];

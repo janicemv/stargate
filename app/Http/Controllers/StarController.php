@@ -114,8 +114,8 @@ class StarController extends Controller
             foreach (explode(',', $attributes['keywords']) as $keyword) {
                 $star->keyword(trim($keyword));
             }
-        } elseif ($formType === 'glyph') {
-            dd($request->all());
+        } elseif ($formType === 'glyph') { //parei aqui! tem q corrigir o path
+            // dd($request->all());
 
             $attributes = $request->validate([
                 'star_id' => ['required', 'exists:stars,id'],
@@ -130,18 +130,20 @@ class StarController extends Controller
                 $path = $request->file('glyph')->store('stars', 'public');
             }
 
-            $star->symbols()->create([
-                'star_id'     => $request->star_id,
-                'path'        => $path,
-                'description' => $request->description,
-                'reference'   => $request->reference,
-                'url'         => $request->url,
-                'user_id'     => Auth::id(),
-            ]);
+            echo $path;
+
+            // $star->symbols()->create([
+            //     'star_id'     => $request->star_id,
+            //     'path'        => $path,
+            //     'description' => $request->description,
+            //     'reference'   => $request->reference,
+            //     'url'         => $request->url,
+            //     'user_id'     => Auth::id(),
+            // ]);
 
 
 
-            return redirect("/star/{$star->name}");
+            // return redirect("/star/{$star->name}");
         }
     }
 }

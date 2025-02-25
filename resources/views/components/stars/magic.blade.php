@@ -34,7 +34,7 @@
                             $magicRefNumber = $magicReferences[$symbol->reference]['index'];
                         @endphp
                         <div class="justify-items-center mb-4">
-                            <img src="{{ Vite::asset('storage/app/public/stars/' . $symbol->path) }}"
+                            <img src="{{ Vite::asset('storage/app/public/' . $symbol->path) }}"
                                 alt="{{ $symbol->description }}" class="star-glyph">
                             <figcaption class="mt-2 text-sm italic">{{ $symbol->description }} <x-sup>[{{ $magicRefNumber }}]</x-sup></figcaption>
                         </div>
