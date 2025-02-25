@@ -187,7 +187,7 @@
     <div class="container mx-auto">
         <footer class="flex flex-wrap justify-between items-center py-3 my-4 border-t mx-6">
             <div class="flex items-center space-x-2 md:space-x-4">
-                <span class="mb-3 text-gray-500">© 2025 Janice de Miranda V. Vilela</span>
+                <span class="mb-3"><strong class="text-purple-medium dark:text-purple-light">Stargate © 2025</strong> by Janice de Miranda V. Vilela is licensed under <x-link href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</x-link> <i class="fa-brands fa-creative-commons"></i> <i class="fa-brands fa-creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc"></i> <i class="fa-brands fa-creative-commons-nd"></i></span>
             </div>
 
             <ul class="flex space-x-3">

@@ -3,24 +3,24 @@
         <div class="flex justify-between flex-1 sm:hidden">
             @if ($paginator->onFirstPage())
                 <span
-                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-light bg-white border border-purple cursor-default leading-5 rounded-md dark:text-gray-light dark:bg-purple dark:border-gray">
+                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-light bg-purple border border-purple cursor-default leading-5 rounded-md dark:text-gray-light dark:bg-purple dark:border-gray">
                     {!! __('pagination.previous') !!}
                 </span>
             @else
                 <a href="{{ $paginator->previousPageUrl() }}"
-                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-light bg-white border border-purple leading-5 rounded-md hover:text-pruple-medium focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-light active:text-gray transition ease-in-out duration-150  dark:bg-purple dark:border-gray  dark:text-gray-light  dark:active:bg-purple dark:active:text-off-white">
+                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-light bg-purple border border-purple leading-5 rounded-md hover:text-pruple-medium focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-light active:text-gray transition ease-in-out duration-150  dark:bg-purple dark:border-gray  dark:text-gray-light  dark:active:bg-purple dark:active:text-off-white">
                     {!! __('pagination.previous') !!}
                 </a>
             @endif
 
             @if ($paginator->hasMorePages())
                 <a href="{{ $paginator->nextPageUrl() }}"
-                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-light bg-white border border-purple leading-5 rounded-md hover:text-pruple-medium focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-light active:text-gray transition ease-in-out duration-150  dark:bg-purple dark:border-gray  dark:text-gray-light  dark:active:bg-purple dark:active:text-off-white">
+                    class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-light bg-purple border border-purple leading-5 rounded-md hover:text-pruple-medium focus:outline-none focus:ring ring-gray-300 focus:border-blue-300 active:bg-gray-light active:text-gray transition ease-in-out duration-150  dark:bg-purple dark:border-gray  dark:text-gray-light  dark:active:bg-purple dark:active:text-off-white">
                     {!! __('pagination.next') !!}
                 </a>
             @else
                 <span
-                    class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-light bg-white border border-gray-light cursor-default leading-5 rounded-md dark:text-gray dark:bg-gray dark:border-gray-light">
+                    class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-light bg-purple border border-gray-light cursor-default leading-5 rounded-md dark:text-gray dark:bg-gray dark:border-gray-light">
                     {!! __('pagination.next') !!}
                 </span>
             @endif

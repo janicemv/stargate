@@ -1,12 +1,108 @@
+# Stargate
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Stargate is a database-driven web application for cataloging and exploring stars and constellations. Built using **Laravel**, **Blade**, **Tailwind**, and **MySQL**, the project aims to provide a structured and searchable system for celestial objects, including astronomical, astrological, and mythological/spiritual insights.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Features
+
+- 🌟 **Star Database** – Stores detailed information about stars, including multiple names, astronomical data, and magical correspondences.
+- 🔭 **Constellations** – Connect stars to their constellations, historical references and official IAU information.
+- 🏷️ **Keywords** – Link stars to relevant keywords and themes.
+- 🖼️ **Stellar Glyphs** – Upload and manage stellar glyphs.
+- 🔍 **Search** - By Constellation, Star name, Designation or HIP
+
+## Tech Stack
+
+- **Backend:** Laravel, PHP, MySQL
+- **Frontend:** Blade, Tailwind CSS
+- **Database:** SQL
+- **Storage:** Local file storage for glyphs (with possible cloud integration)
+- **Authentication:** Laravel Breeze (for API authentication)
+
+## To be implemented
+
+- Interactive tabs to choose between Astronomical and Magical information in Star pages
+- Add view by Keyword
+- Dark mode: Glyphs colored in white 
+- Table and form to include data in the References page
+- Suggestions/Report an error form
+- Edit and delete information (if you were the user who added it)
+- Deployment of the website for public access
+- Addition of other celestial objects
+
+## Screenshots
+
+From 25/02/2025
+
+![Homepage](storage/app/public/screenshots/home.PNG)
+
+![Homepage dark mode](storage/app/public/screenshots/home-dark.PNG)
+
+![Stargate: star list](storage/app/public/screenshots/stargate-full.PNG)
+
+![Stargate: star list dark mode](storage/app/public/screenshots/stargate-dark.PNG)
+
+![Stargate hover effect](storage/app/public/screenshots/hover-effect-stars.PNG)
+
+
+![Constellations index](storage/app/public/screenshots/constellations.PNG)
+
+![Constellations index dark mode](storage/app/public/screenshots/constellations-dark.PNG)
+
+![Constellations hover effect](storage/app/public/screenshots/hover-effect-constellations.PNG)
+
+![Constellation page](storage/app/public/screenshots/constellation-view.PNG)
+
+![Constellation page dark mode](storage/app/public/screenshots/constellation-view-dark.PNG)
+
+
+![Star page](storage/app/public/screenshots/star-view-1.PNG)
+
+![Star page](storage/app/public/screenshots/star-view-2.PNG)
+
+![Star page dark mode](storage/app/public/screenshots/star-view-1-dark.PNG)
+
+![Star page dark mode](storage/app/public/screenshots/star-view-2-dark.PNG)
+
+### Mobile schreenshots
+
+![Mobile view stargate](storage/app/public/screenshots/mobile-stargate-1.PNG)
+
+![Mobile view stargate](storage/app/public/screenshots/mobile-stargate-2.PNG)
+
+![Mobile view stargate dark mode](storage/app/public/screenshots/mobile-stargate-1-dark.PNG)
+
+![Mobile view stargate dark mode](storage/app/public/screenshots/mobile-stargate-2-dark.PNG)
+
+
+![Mobile view constellation cards](storage/app/public/screenshots/mobile-constellations.PNG)
+
+![Mobile view constellation cards dark mode](storage/app/public/screenshots/mobile-constellations-dark.PNG)
+
+![Mobile view constellation](storage/app/public/screenshots/mobile-view.PNG)
+
+![Mobile view constellation dark mode](storage/app/public/screenshots/mobile-view-dark.PNG)
+
+![Mobile view constellation](storage/app/public/screenshots/mobile-star-view.PNG)
+
+![Mobile view constellation](storage/app/public/screenshots/mobile-star-view-dark.PNG)
+
+
+## Contributing
+
+Contributions will be open soon!
+
+## License
+
+Stargate © 2025 by Janice de Miranda V. Vilela is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.  
+
+You may share this project as-is with proper attribution, but you may not use it for commercial purposes or modify it.  
+
+Full license details: https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+## Contact
+
+For questions or feedback, feel free to reach out or open an issue!
+
 
 ## About Laravel
 

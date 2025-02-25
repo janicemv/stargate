@@ -8,6 +8,8 @@ use App\Models\StarAstronomy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Arr;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class StarController extends Controller
 {
@@ -126,24 +128,37 @@ class StarController extends Controller
             ]);
 
             $path = null;
+
             if ($request->hasFile('glyph')) {
-                $path = $request->file('glyph')->store('stars', 'public');
+                $file = $request->file('glyph');
+                $star = Star::findOrFail($request->star_id);
+                $baseName = Str::slug($star->name, '_');
+                $extension = $file->getClientOriginalExtension();
+
+                $fileName = $baseName . '.' . $extension;
+                $counter = 1;
+
+                while (Storage::disk('public')->exists("stars/{$fileName}")) {
+                    $fileName = $baseName . '_' . $counter . '.' . $extension;
+                    $counter++;
+                }
+
+                $path = $file->storeAs('stars', $fileName, 'public');
             }
 
-            echo $path;
 
-            // $star->symbols()->create([
-            //     'star_id'     => $request->star_id,
-            //     'path'        => $path,
-            //     'description' => $request->description,
-            //     'reference'   => $request->reference,
-            //     'url'         => $request->url,
-            //     'user_id'     => Auth::id(),
-            // ]);
-
+            $star->symbols()->create([
+                'star_id'     => $request->star_id,
+                'path'        => $path,
+                'description' => $request->description,
+                'reference'   => $request->reference,
+                'url'         => $request->url,
+                'user_id'     => Auth::id(),
+            ]);
 
 
-            // return redirect("/star/{$star->name}");
+
+            return redirect("/star/{$star->name}");
         }
     }
 }
