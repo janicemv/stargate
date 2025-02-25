@@ -18,18 +18,6 @@ Stargate is a database-driven web application for cataloging and exploring stars
 - **Storage:** Local file storage for glyphs (with possible cloud integration)
 - **Authentication:** Laravel Breeze (for API authentication)
 
-## To be implemented
-
-- Interactive tabs to choose between Astronomical and Magical information in Star pages
-- Add view by Keyword
-- Dark mode: Glyphs colored in white 
-- Table and form to include data in the References page
-- Suggestions/Report an error form
-- Edit and delete information (if you were the user who added it)
-- Integration with email for real users registration
-- Deployment of the website for public access
-- Addition of other celestial objects
-
 ## Screenshots
 
 From 25/02/2025
@@ -116,6 +104,18 @@ From 25/02/2025
 - Each db entry is connected to the user. Users will be able to edit or delete their own data entrances.
 - Every information added to the db needs to have its own reference. It can be personal opinion or impression, but this needs to be written.
 - URL field optional to link the information to its reference.
+
+## To be implemented
+
+- Interactive tabs to choose between Astronomical and Magical information in Star pages
+- Add view by Keyword
+- Dark mode: Glyphs colored in white 
+- Table and form to include data in the References page
+- Suggestions/Report an error form
+- Edit and delete information (if you were the user who added it)
+- Integration with email for real users registration
+- Deployment of the website for public access
+- Addition of other celestial objects
 
 ## Contributing
 
