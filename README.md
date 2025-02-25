@@ -34,9 +34,19 @@ Stargate is a database-driven web application for cataloging and exploring stars
 
 From 25/02/2025
 
+### Homepage
+
+- Search by Constellation, Star name, designation or HIP
+
 ![Homepage](/resources/images/screenshots/home.PNG)
 
 ![Homepage dark mode](/resources/images/screenshots/home-dark.PNG)
+
+### Star list
+
+- Order by name, constellation, designation, hip, magnitude, ascension or declination
+- Hover effect in light and dark mode
+- Click on the name of the star to go to the dedicate page 
 
 ![Stargate: star list](/resources/images/screenshots/stargate-full.PNG)
 
@@ -44,6 +54,12 @@ From 25/02/2025
 
 ![Stargate hover effect](/resources/images/screenshots/hover-effect-stars.PNG)
 
+### Constellations Index
+
+- Shows three stars of each constellation on each card
+- The image on the card is currently a placeholder. It will soon be replaced by a specific image for each constellation
+- Hover effect in light and dark mode
+- Click on "Read more" to see the dedicated page
 
 ![Constellations index](/resources/images/screenshots/constellations.PNG)
 
@@ -55,6 +71,10 @@ From 25/02/2025
 
 ![Constellation page dark mode](/resources/images/screenshots/constellation-view-dark.PNG)
 
+### Star
+
+- Astronomical and magical information
+- Shows references for every information (taken from the database)
 
 ![Star page](/resources/images/screenshots/star-view-1.PNG)
 
@@ -65,6 +85,9 @@ From 25/02/2025
 ![Star page dark mode](/resources/images/screenshots/star-view-2-dark.PNG)
 
 ### Mobile schreenshots
+
+- Responsive design
+- Light and dark mode
 
 ![Mobile view stargate](/resources/images/screenshots/mobile-stargate-1.PNG)
 
@@ -87,6 +110,12 @@ From 25/02/2025
 
 ![Mobile view constellation](/resources/images/screenshots/mobile-star-view-dark.PNG)
 
+## Add Info
+
+- You need to be a registered user to add info to the database.
+- Each db entry is connected to the user. Users will be able to edit or delete their own data entrances.
+- Every information added to the db needs to have its own reference. It can be personal opinion or impression, but this needs to be written.
+- URL field optional to link the information to its reference.
 
 ## Contributing
 
@@ -105,7 +134,7 @@ Full license details: https://creativecommons.org/licenses/by-nc-nd/4.0/
 For questions or feedback, feel free to reach out or open an issue!
 
 
-## About Laravel
+# About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
