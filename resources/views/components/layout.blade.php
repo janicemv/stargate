@@ -32,6 +32,7 @@
                     {{-- <x-navlink href="/" :active="request()->is('/videos')">Videos</x-navlink> --}}
                     <x-navlink href="/stargate" :active="request()->is('stargate')">Stars</x-navlink>
                     <x-navlink href="/constellations" :active="request()->is('constellations')">Constellations</x-navlink>
+                    <x-navlink href="/stars/magic" :active="request()->is('stars/magic')">Star Magic</x-navlink>
                     <x-navlink href="/references" :active="request()->is('references')">References</x-navlink>
                 </div>
                 <!-- Auth links, Dark Mode button, and Mobile menu button -->
@@ -85,6 +86,9 @@
                                     <a href="/stars/create/keywords" class="block px-4 py-2 text-sm" role="menuitem"
                                         tabindex="-1"
                                         id="menu-item-1":active="request()->is('stars/create/keywords')">Keywords</a>
+                                        <a href="/stars/create/glyphs" class="block px-4 py-2 text-sm" role="menuitem"
+                                        tabindex="-1"
+                                        id="menu-item-1":active="request()->is('stars/create/keywords')">Stellar Glyph</a>
                                 </div>
 
                             </div>
@@ -136,6 +140,7 @@
                     {{-- <x-navlink href="/" :active="request()->is('/videos')">Videos</x-navlink> --}}
                     <x-navlink href="/stargate" :active="request()->is('stargate')">Stars</x-navlink>
                     <x-navlink href="/constellations" :active="request()->is('constellations')">Constellations</x-navlink>
+                    <x-navlink href="/stars/magic" :active="request()->is('stars/magic')">Star Magic</x-navlink>
                     <x-navlink href="/references" :active="request()->is('references')">References</x-navlink>
                     <x-navlink href="/search" :active="request()->is('search')">Search</x-navlink>
                     <hr class="my-2 border-t border-gray-light" />
@@ -150,6 +155,8 @@
                         tabindex="-1" id="menu-item-1">Magical Info</x-navlink>
                     <x-navlink href="/stars/create/keywords" class="block px-4 py-2 text-sm" role="menuitem"
                         tabindex="-1" id="menu-item-1">Keywords</x-navlink>
+                        <x-navlink href="/stars/create/glyphs" class="block px-4 py-2 text-sm" role="menuitem"
+                        tabindex="-1" id="menu-item-1">Stellar glyphs</x-navlink>
                     <hr class="my-2 border-t border-gray-light" />
 
                     <div class="mt-6 px-4 text-sm font-semibold text-gray-500 uppercase">Dashboard</div>

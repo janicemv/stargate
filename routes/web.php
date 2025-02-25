@@ -15,8 +15,10 @@ Route::get('/search', [SearchController::class, 'search']);
 
 Route::get('/stargate', [StarController::class, 'index']);
 Route::get('/star/{star:name}', [StarController::class, 'show']);
+Route::get('/stars/magic', [StarController::class, 'magic']);
 
 Route::get('stars/create/{formType}', [StarController::class, 'create'])->middleware('auth');
+
 
 Route::post('stars/store/{formType}', [StarController::class, 'store'])->middleware('auth');
 

@@ -1,6 +1,6 @@
 <!-- Star Magic -->
 
-@if ($star->starMagic->isNotEmpty() || $star->symbols->isNotEmpty())
+@if ($star->starMagic->isNotEmpty() || $star->symbols->isNotEmpty() || $star->keywords->isNotEmpty())
 
     @php
         $magicReferences = [];

@@ -36,6 +36,13 @@ class StarController extends Controller
         return view('stars.star', ['star' => $star]);
     }
 
+    public function magic()
+    {
+
+        $stars = Star::all();
+        return view('stars.magicstars', ['stars' => $stars]);
+    }
+
     public function create($formType)
     {
         $stars = Star::all();

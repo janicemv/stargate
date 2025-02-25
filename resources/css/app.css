@@ -48,3 +48,7 @@ margin: 1rem auto;
     /* width: 30%; */
     height: 63px;
 }
+
+.li-table {
+    list-style-type: none;
+}
