@@ -55,14 +55,21 @@ From 25/02/2025
 
 ![Constellations hover effect](/resources/images/screenshots/hover-effect-constellations.PNG)
 
+### Constellation page
+
+- Click on the name of the star to go to its dedicated page
+- Constellation Magic: This code gathers information for each star and shows their references.
+- Soon: Will also show stellar glyphs and organized keywords.
+
 ![Constellation page](/resources/images/screenshots/constellation-view.PNG)
 
 ![Constellation page dark mode](/resources/images/screenshots/constellation-view-dark.PNG)
 
-### Star
+### Star Page
 
 - Astronomical and magical information
 - Shows references for every information (taken from the database)
+- Soon: Stellar glyphs will be formatted to be seen on dark mode
 
 ![Star page](/resources/images/screenshots/star-view-1.PNG)
 
