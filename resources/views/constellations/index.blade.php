@@ -8,8 +8,8 @@
         <x-card>
             <x-slot name="header">
                 <x-card-header
-                    :image="Vite::asset('./storage/app/public/stars/sirius.png')"
-                    alt="{{ $constellation->name }}"
+                :image="Vite::asset('storage/app/public/' . ($constellation->stars->filter(fn($star) => $star->symbols->isNotEmpty())->first()?->symbols->first()?->path ?? 'stars/constellation.png'))"
+                alt="{{ $constellation->name }}"
                     title="{{ $constellation->name }}"
                     subtitle="{{ $constellation->abbrev }}"
                     link="/constellations/{{ $constellation->name }}" />
@@ -20,7 +20,7 @@
             <x-card-list title="{{ $constellation->abbrev }} Stars" link="/constellations/{{ $constellation->name }}" linkText="View all">
                 @foreach ($constellation->stars as $star)
                 <x-card-list-item
-                    :image="Vite::asset('resources/images/stars/sirius.svg')"
+                    {{-- :image="Vite::asset('storage/app/public/stars/' . $star->path)" --}}
                     alt="{{ $star->name }}"
                     name="{{ $star->name }}"
                     code="{{ $star->iau_desig }}"

@@ -52,16 +52,20 @@
                         'starName' => $star->name,
                         'starId' => $star->id,
                         'magic' => $magic,
+                        'glyphs' => $star->symbols,
                     ];
                 });
             })
             ->filter();
 
-        $groupedByKeywords = $constellation->stars->flatMap(fn($star) => $star->keywords)->filter()->unique()->values();
+        $groupedByKeywords = $constellation->stars->flatMap(fn($star) => $star->keywords)->filter()->unique('id')->values();
 
         $groupedByPlanets = $magicData->pluck('planets')->filter()->unique()->values();
 
         $groupedByMagic = $magicData->pluck('themagic')->filter()->unique()->values();
+
+        $groupedBySymbols = $constellation->stars->flatMap(fn($star) => $star->symbols)->filter()->unique()->values();
+
     @endphp
 
     @if ($magicData->isNotEmpty())
@@ -79,6 +83,21 @@
             @endif
 
             <x-round-container>
+
+
+                <x-section-info title="Stellar glyphs">
+                    @foreach ($groupedBySymbols as $symbol)
+                        
+                        <div class="justify-items-center mb-4">
+                            <img src="{{ Vite::asset('storage/app/public/' . $symbol->path) }}"
+                                alt="{{ $symbol->description }}" class="star-glyph">
+                            <figcaption class="mt-2 text-sm italic">{{ $symbol->description }} <x-sup>
+                                    {{-- <a href="/star/{{ $starData['starName'] }}">[{{ $starData['starName'] }}]</a> --}}
+                                </x-sup></figcaption>
+                        </div>
+                    @endforeach
+                </x-section-info>
+
 
                 <x-section-info title="Planets">
                     <ul class="list-star list-inside">

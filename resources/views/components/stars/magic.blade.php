@@ -266,7 +266,7 @@
                     @foreach ($magicReferences as $magicReference => $data)
                         <li id="ref-{{ $data['index'] }}" class="text-sm blue-icon">
                             @if ($data['url'])
-                                <a href="{{ $data['url'] }}" target="_blank">{{ $magicReference }}</a>
+                                <x-link href="{{ $data['url'] }}">{{ $magicReference }}</x-link>
                             @else
                                 {{ $magicReference }}
                             @endif
