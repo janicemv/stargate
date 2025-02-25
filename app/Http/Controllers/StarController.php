@@ -162,10 +162,9 @@ class StarController extends Controller
                 'url'         => $request->url,
                 'user_id'     => Auth::id(),
             ]);
-
-
-
-            return redirect("/star/{$star->name}");
         }
+
+
+        return redirect("/star/{$star->name}");
     }
 }
