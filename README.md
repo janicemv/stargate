@@ -34,58 +34,58 @@ Stargate is a database-driven web application for cataloging and exploring stars
 
 From 25/02/2025
 
-![Homepage](/storage/app/public/screenshots/home.PNG)
+![Homepage](/resources/images/screenshots/home.PNG)
 
-![Homepage dark mode](/storage/app/public/screenshots/home-dark.PNG)
+![Homepage dark mode](/resources/images/screenshots/home-dark.PNG)
 
-![Stargate: star list](/storage/app/public/screenshots/stargate-full.PNG)
+![Stargate: star list](/resources/images/screenshots/stargate-full.PNG)
 
-![Stargate: star list dark mode](/storage/app/public/screenshots/stargate-dark.PNG)
+![Stargate: star list dark mode](/resources/images/screenshots/stargate-dark.PNG)
 
-![Stargate hover effect](/storage/app/public/screenshots/hover-effect-stars.PNG)
-
-
-![Constellations index](/storage/app/public/screenshots/constellations.PNG)
-
-![Constellations index dark mode](/storage/app/public/screenshots/constellations-dark.PNG)
-
-![Constellations hover effect](/storage/app/public/screenshots/hover-effect-constellations.PNG)
-
-![Constellation page](/storage/app/public/screenshots/constellation-view.PNG)
-
-![Constellation page dark mode](/storage/app/public/screenshots/constellation-view-dark.PNG)
+![Stargate hover effect](/resources/images/screenshots/hover-effect-stars.PNG)
 
 
-![Star page](/storage/app/public/screenshots/star-view-1.PNG)
+![Constellations index](/resources/images/screenshots/constellations.PNG)
 
-![Star page](/storage/app/public/screenshots/star-view-2.PNG)
+![Constellations index dark mode](/resources/images/screenshots/constellations-dark.PNG)
 
-![Star page dark mode](/storage/app/public/screenshots/star-view-1-dark.PNG)
+![Constellations hover effect](/resources/images/screenshots/hover-effect-constellations.PNG)
 
-![Star page dark mode](/storage/app/public/screenshots/star-view-2-dark.PNG)
+![Constellation page](/resources/images/screenshots/constellation-view.PNG)
+
+![Constellation page dark mode](/resources/images/screenshots/constellation-view-dark.PNG)
+
+
+![Star page](/resources/images/screenshots/star-view-1.PNG)
+
+![Star page](/resources/images/screenshots/star-view-2.PNG)
+
+![Star page dark mode](/resources/images/screenshots/star-view-1-dark.PNG)
+
+![Star page dark mode](/resources/images/screenshots/star-view-2-dark.PNG)
 
 ### Mobile schreenshots
 
-![Mobile view stargate](/storage/app/public/screenshots/mobile-stargate-1.PNG)
+![Mobile view stargate](/resources/images/screenshots/mobile-stargate-1.PNG)
 
-![Mobile view stargate](/storage/app/public/screenshots/mobile-stargate-2.PNG)
+![Mobile view stargate](/resources/images/screenshots/mobile-stargate-2.PNG)
 
-![Mobile view stargate dark mode](/storage/app/public/screenshots/mobile-stargate-1-dark.PNG)
+![Mobile view stargate dark mode](/resources/images/screenshots/mobile-stargate-1-dark.PNG)
 
-![Mobile view stargate dark mode](/storage/app/public/screenshots/mobile-stargate-2-dark.PNG)
+![Mobile view stargate dark mode](/resources/images/screenshots/mobile-stargate-2-dark.PNG)
 
 
-![Mobile view constellation cards](/storage/app/public/screenshots/mobile-constellations.PNG)
+![Mobile view constellation cards](/resources/images/screenshots/mobile-constellations.PNG)
 
-![Mobile view constellation cards dark mode](/storage/app/public/screenshots/mobile-constellations-dark.PNG)
+![Mobile view constellation cards dark mode](/resources/images/screenshots/mobile-constellations-dark.PNG)
 
-![Mobile view constellation](/storage/app/public/screenshots/mobile-view.PNG)
+![Mobile view constellation](/resources/images/screenshots/mobile-view.PNG)
 
-![Mobile view constellation dark mode](/storage/app/public/screenshots/mobile-view-dark.PNG)
+![Mobile view constellation dark mode](/resources/images/screenshots/mobile-view-dark.PNG)
 
-![Mobile view constellation](/storage/app/public/screenshots/mobile-star-view.PNG)
+![Mobile view constellation](/resources/images/screenshots/mobile-star-view.PNG)
 
-![Mobile view constellation](/storage/app/public/screenshots/mobile-star-view-dark.PNG)
+![Mobile view constellation](/resources/images/screenshots/mobile-star-view-dark.PNG)
 
 
 ## Contributing
