@@ -90,7 +90,7 @@
                         
                         <div class="justify-items-center mb-4">
                             <img src="{{ Vite::asset('storage/app/public/' . $symbol->path) }}"
-                                alt="{{ $symbol->description }}" class="star-glyph">
+                                alt="{{ $symbol->description }}" class="star-glyph dark:invert">
                             <figcaption class="mt-2 text-sm italic">{{ $symbol->description }} <x-sup>
                                     {{-- <a href="/star/{{ $starData['starName'] }}">[{{ $starData['starName'] }}]</a> --}}
                                 </x-sup></figcaption>

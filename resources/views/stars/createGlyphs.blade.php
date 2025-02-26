@@ -25,11 +25,15 @@
 
         <x-forms.input-file label="Stellar Glyph *" name="glyph" accept=".png" required placeholder="Select the image of the star (.png)" />
 
-        <x-forms.input label="Description *" name="description" placeholder="Agrippa's Sygil of [Name of star]" />
+        <x-forms.input label="Description *" name="description" required placeholder="Agrippa's Sygil of [Name of star]" />
 
-        <x-forms.input label="Reference *" name="reference" placeholder="Where did you get this information?" />
+        <x-forms.input label="Reference *" name="reference" required placeholder="Where did you get this information?" />
+        <x-forms.form-ref />
+
 
         <x-forms.input label="URL" name="url" placeholder="Enter a URL if available" />
+        <x-forms.form-url-legend />
+
 
 
         <x-forms.button>Submit</x-forms.button>

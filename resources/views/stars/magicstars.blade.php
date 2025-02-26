@@ -72,7 +72,7 @@
                                         <ul class="list-star list-inside">
                                             <li class="li-table mb-2"> <img
                                                     src="{{ Vite::asset('storage/app/public/' . $symbol->path) }}"
-                                                    alt="Symbol of {{ $star->name }}" class="w-8">
+                                                    alt="Symbol of {{ $star->name }}" class="w-8 dark:invert">
                                             </li>
                                         </ul>
                                     @endforeach
@@ -210,9 +210,9 @@
                                         </a></x-tables.td-hidden>
                                     <x-tables.td>
                                         @foreach ($star->symbols as $symbol)
-                                        <li class="li-table mb-2"> <img
+                                        <li class="li-table mb-2 list-none"> <img
                                             src="{{ Vite::asset('storage/app/public/' . $symbol->path) }}"
-                                            alt="Symbol of {{ $star->name }}" class="w-8">
+                                            alt="{{ $symbol->description }}" class="w-8 dark:invert">
                                     </li>
                                         @endforeach
                                     </x-tables.td>

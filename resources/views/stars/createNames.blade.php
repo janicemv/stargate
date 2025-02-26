@@ -23,12 +23,15 @@
 
         </div>
 
-        <x-forms.input label="Name *" name="name" placeholder="The Follower, Dog Star, 9 Canis Majoris..." />
+        <x-forms.input label="Name *" name="name" required placeholder="The Follower, Dog Star, 9 Canis Majoris..." />
 
 
-    <x-forms.input label="Reference *" name="reference" placeholder="Where did you get this information?" />
+    <x-forms.input label="Reference *" name="reference" required placeholder="Where did you get this information?" />
+    <x-forms.form-ref />
 
-    <x-forms.input label="URL" name="url" placeholder="Enter a URL if available" />
+
+    <x-forms.input label="URL" name="url" placeholder="Enter a URL for your reference, if available" />
+    <x-forms.form-url-legend />
 
 
     <x-forms.button>Submit</x-forms.button>

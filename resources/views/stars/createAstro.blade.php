@@ -23,14 +23,16 @@
         </div>
 
 
-        <x-forms.input label="Type of info *" name="type" placeholder="Age, brightness, Stellar system...?" />
+        <x-forms.input label="Type of info *" name="type" required placeholder="Age, brightness, Stellar system...?" />
 
-        <x-forms.input label="Description *" name="description" placeholder="Description" />
+        <x-forms.input label="Description *" name="description" required placeholder="Description" />
 
-        <x-forms.input label="Reference *" name="reference" placeholder="Where did you get this information?" />
+        <x-forms.input label="Reference *" name="reference" required placeholder="Where did you get this information?" />
+        <x-forms.form-ref />
+            
 
         <x-forms.input label="URL" name="url" placeholder="Enter a URL if available" />
-
+        <x-forms.form-url-legend />
 
 
 

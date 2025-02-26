@@ -1,6 +1,6 @@
 <!-- Star Magic -->
 
-@if ($star->starMagic->isNotEmpty() || $star->symbols->isNotEmpty() || $star->keywords->isNotEmpty())
+@if ($star->starMagic->isNotEmpty() || $star->symbols->isNotEmpty() || $star->keywords->isNotEmpty)
 
     @php
         $magicReferences = [];
@@ -35,7 +35,7 @@
                         @endphp
                         <div class="justify-items-center mb-4">
                             <img src="{{ Vite::asset('storage/app/public/' . $symbol->path) }}"
-                                alt="{{ $symbol->description }}" class="star-glyph">
+                                alt="{{ $symbol->description }}" class="star-glyph dark:invert">
                             <figcaption class="mt-2 text-sm italic">{{ $symbol->description }} <x-sup>[{{ $magicRefNumber }}]</x-sup></figcaption>
                         </div>
                     @endforeach

@@ -17,7 +17,8 @@
     --gray-dark: #484359;
     --gray: #726D8C;
     --gray-light: #E1E1E1;
-    --white :#F2F2F2;
+    --white: #F2F2F2;
+
 }
 
 
@@ -26,15 +27,15 @@
 }
 
 .star-card {
-margin: 1rem auto;
+    margin: 1rem auto;
     width: 72px;
 }
 
-.const-card-img  {
+.const-card-img {
     width: 81px;
 }
 
-.blue-icon::marker{
+.blue-icon::marker {
     color: var(--blue-medium);
     font-weight: 600;
 }
@@ -43,8 +44,7 @@ margin: 1rem auto;
     color: var(--blue-light);
 }
 
-.star-glyph
-{
+.star-glyph {
     /* width: 30%; */
     height: 63px;
 }

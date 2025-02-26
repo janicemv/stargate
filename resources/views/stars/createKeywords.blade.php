@@ -24,7 +24,7 @@
 
 
 
-        <x-forms.input label="Keywords (comma separated)*" name="keywords" placeholder="Love, Protection, Healing..." />
+        <x-forms.input label="Keywords (comma separated)*" name="keywords" required placeholder="Love, Protection, Healing..." />
 
 
 
