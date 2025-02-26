@@ -20,7 +20,7 @@ Stargate is a database-driven web application for cataloging and exploring stars
 
 ## Screenshots
 
-From 25/02/2025
+From 26/02/2025
 
 ### Homepage
 
@@ -34,7 +34,7 @@ From 25/02/2025
 
 - Order by name, constellation, designation, hip, magnitude, ascension or declination
 - Hover effect in light and dark mode
-- Click on the name of the star to go to the dedicate page 
+- Click on the name of the star to go to the dedicated page 
 
 ![Stargate: star list](/resources/images/screenshots/stargate-full.PNG)
 
@@ -45,7 +45,7 @@ From 25/02/2025
 ### Constellations Index
 
 - Shows three stars of each constellation on each card
-- The image on the card is currently a placeholder. It will soon be replaced by a specific image for each constellation
+- When a star from that constellation has a Stellar glyph, it is shown in the constellation card
 - Hover effect in light and dark mode
 - Click on "Read more" to see the dedicated page
 
@@ -59,7 +59,7 @@ From 25/02/2025
 
 - Click on the name of the star to go to its dedicated page
 - Constellation Magic: This code gathers information for each star and shows their references.
-- Soon: Will also show stellar glyphs and organized keywords.
+- Shows stellar glyphs and keywords of each star of that constellation
 
 ![Constellation page](/resources/images/screenshots/constellation-view.PNG)
 
@@ -69,7 +69,6 @@ From 25/02/2025
 
 - Astronomical and magical information
 - Shows references for every information (taken from the database)
-- Soon: Stellar glyphs will be formatted to be seen on dark mode
 
 ![Star page](/resources/images/screenshots/star-view-1.PNG)
 
