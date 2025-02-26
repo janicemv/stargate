@@ -4,7 +4,7 @@
     <x-text>Information from the <x-link href="https://exopla.net/star-names/modern-iau-star-names/">IAU Catalog of Star
             Names</x-link> merged with the <x-link href="https://www.iau.org/public/themes/naming_stars/">List of
             IAU-approved Star Names</x-link></x-text>
-            <x-text>Database updated on 26/02/2025</x-text>
+    <x-text>Database updated on 26/02/2025</x-text>
 
     <div class="w-full flex flex-col items-center justify-center mt-4">
 
