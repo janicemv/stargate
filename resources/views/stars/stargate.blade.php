@@ -4,6 +4,7 @@
     <x-text>Information from the <x-link href="https://exopla.net/star-names/modern-iau-star-names/">IAU Catalog of Star
             Names</x-link> merged with the <x-link href="https://www.iau.org/public/themes/naming_stars/">List of
             IAU-approved Star Names</x-link></x-text>
+            <x-text>Database updated on 26/02/2025</x-text>
 
     <div class="w-full flex flex-col items-center justify-center mt-4">
 
@@ -12,6 +13,7 @@
             <x-tables.table>
                 <x-tables.thead>
                     <tr>
+                        <x-tables.th>#</x-tables.th>
                         <x-tables.th>
                             <a
                                 href="{{ url('/stargate?sort=name&direction=' . ($sortColumn == 'name' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
@@ -22,12 +24,12 @@
                             </a>
                         </x-tables.th>
                         <x-tables.th><a
-                            href="{{ url('/stargate?sort=BayerId&direction=' . ($sortColumn == 'BayerId' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
-                            Bayer ID
-                            @if ($sortColumn == 'BayerId')
-                                <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
-                            @endif
-                        </a></x-tables.th>
+                                href="{{ url('/stargate?sort=BayerId&direction=' . ($sortColumn == 'BayerId' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
+                                Bayer ID
+                                @if ($sortColumn == 'BayerId')
+                                    <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
+                                @endif
+                            </a></x-tables.th>
 
                         <x-tables.th>
                             <a
@@ -92,8 +94,12 @@
                     </tr>
                 </x-tables.thead>
                 <tbody>
+                    @php
+                        $count = 1;
+                    @endphp
                     @foreach ($stars as $star)
                         <x-tables.tr>
+                            <x-tables.td>{{ $count++ }}</x-tables.td>
                             <x-tables.td><a class="font-bold hover:underline"
                                     href="/star/{{ $star->name }}">{{ $star->name }}</a></x-tables.td>
                             <x-tables.td>{{ $star->BayerId }}</x-tables.td>

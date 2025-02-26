@@ -14,6 +14,7 @@
         <x-tables.table>
             <x-tables.thead>
                 <tr>
+                    <x-tables.th>#</x-tables.th>
                     <x-tables.th>Name</x-tables.th>
                     <x-tables.th-hidden>Designation</x-tables.th-hidden>
                     <x-tables.th-hidden>Bayer ID</x-tables.th-hidden>
@@ -24,8 +25,12 @@
                 </tr>
             </x-tables.thead>
             <tbody>
+                @php
+                $count = 1;
+                @endphp
                 @foreach ($constellation->stars as $star)
                     <x-tables.tr>
+                        <x-tables.td>{{ $count++ }}</x-tables.td>
                         <x-tables.td><a class="font-bold hover:underline"
                                 href="/star/{{ $star->name }}">{{ $star->name }}</a></x-tables.td>
                         <x-tables.td-hidden>{{ $star->iau_desig }}</x-tables.td-hidden>
