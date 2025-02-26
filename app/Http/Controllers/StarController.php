@@ -55,10 +55,9 @@ class StarController extends Controller
             $orderCase .= " ELSE 999 END";
 
             $stars = Star::orderByRaw("{$orderCase}, BayerId {$sortDirection}")->paginate(30);
-        } else if ($sortColumn === 'Vmag') {
-            $stars = Star::orderByRaw("Vmag IS NULL, Vmag = '', Vmag {$sortDirection}")->paginate(30);
         } else {
-            $stars = Star::orderBy($sortColumn, $sortDirection)->paginate(30);
+            $stars = Star::orderByRaw("$sortColumn IS NULL, $sortColumn = '', $sortColumn $sortDirection")
+                ->paginate(30);
         }
         return view('stars.stargate', [
             'stars' => $stars,
