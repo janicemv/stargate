@@ -21,7 +21,13 @@
                                 @endif
                             </a>
                         </x-tables.th>
-                        <x-tables.th>Bayer ID</x-tables.th>
+                        <x-tables.th><a
+                            href="{{ url('/stargate?sort=BayerId&direction=' . ($sortColumn == 'BayerId' && $sortDirection == 'asc' ? 'desc' : 'asc')) }}">
+                            Bayer ID
+                            @if ($sortColumn == 'BayerId')
+                                <span>{{ $sortDirection == 'asc' ? '↑' : '↓' }}</span>
+                            @endif
+                        </a></x-tables.th>
 
                         <x-tables.th>
                             <a
