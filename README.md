@@ -42,6 +42,8 @@ From 26/02/2025
 
 ![Stargate hover effect](/resources/images/screenshots/hover-effect-stars.PNG)
 
+![Stargate hover effect dark mode](/resources/images/screenshots/hover-effect-stars-dark.PNG)
+
 ### Constellations Index
 
 - Shows three stars of each constellation on each card
@@ -54,6 +56,8 @@ From 26/02/2025
 ![Constellations index dark mode](/resources/images/screenshots/constellations-dark.PNG)
 
 ![Constellations hover effect](/resources/images/screenshots/hover-effect-constellations.PNG)
+
+![Constellations hover effect dark mode](/resources/images/screenshots/hover-effect-constellations-dark.PNG)
 
 ### Constellation page
 
@@ -77,6 +81,18 @@ From 26/02/2025
 ![Star page dark mode](/resources/images/screenshots/star-view-1-dark.PNG)
 
 ![Star page dark mode](/resources/images/screenshots/star-view-2-dark.PNG)
+
+### Star Magic Page
+
+- Shows all magical correspondences related to each star
+
+![Star magic page](/resources/images/screenshots/starMagic-1.PNG)
+![Star magic page](/resources/images/screenshots/starMagic-2.PNG)
+
+![Star magic page dark mode](/resources/images/screenshots/starMagic-1-dark.PNG)
+![Star magic page dark mode](/resources/images/screenshots/starMagic-2-dark.PNG)
+
+
 
 ### Mobile schreenshots
 
@@ -106,7 +122,7 @@ From 26/02/2025
 
 ## Add Info
 
-- You need to be a registered user to add info to the database.
+- You will need to be a registered user to add info to the database.
 - Each db entry is connected to the user. Users will be able to edit or delete their own data entrances.
 - Every information added to the db needs to have its own reference. It can be personal opinion or impression, but this needs to be written.
 - URL field optional to link the information to its reference.
@@ -115,10 +131,10 @@ From 26/02/2025
 
 - Interactive tabs to choose between Astronomical and Magical information in Star pages
 - Add view by Keyword
-- Dark mode: Glyphs colored in white 
 - Table and form to include data in the References page
 - Suggestions/Report an error form
 - Edit and delete information (if you were the user who added it)
+- Moderation of db entrance (shows only approved info)
 - Integration with email for real users registration
 - Deployment of the website for public access
 - Addition of other celestial objects
