@@ -8,5 +8,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        rollupOptions: {
+            // Usar assetsInclude para permitir que PNGs sejam tratados corretamente como assets
+            assetsInclude: ['**/*.PNG']
+        }
+    }
 });
 

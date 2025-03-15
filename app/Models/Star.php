@@ -61,7 +61,7 @@ class Star extends Model
         return in_array($this->id, [15, 16, 31, 32, 39, 45, 55, 61, 124, 330, 354, 399, 404, 435, 477]);
     }
 
-  
+
 
     public function addSymbol(string $filePath): StarSymbol
     {

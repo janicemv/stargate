@@ -14,7 +14,6 @@ use Illuminate\Support\Str;
 class StarController extends Controller
 {
 
-
     public function index(Request $request)
     {
         $sortColumn = $request->input('sort', 'name');
@@ -160,7 +159,7 @@ class StarController extends Controller
             foreach (explode(',', $attributes['keywords']) as $keyword) {
                 $star->keyword(trim($keyword));
             }
-        } elseif ($formType === 'glyph') { //parei aqui! tem q corrigir o path
+        } elseif ($formType === 'glyph') {
             // dd($request->all());
 
             $attributes = $request->validate([
