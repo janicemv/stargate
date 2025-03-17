@@ -26,9 +26,9 @@ From 26/02/2025
 
 - Search by Constellation, Star name, designation or HIP
 
-![Homepage](/resources/images/screenshots/home.PNG)
+![Homepage](./storage/app/private/screenshots/home.PNG)
 
-![Homepage dark mode](/resources/images/screenshots/home-dark.PNG)
+![Homepage dark mode](./storage/app/private/screenshots/home-dark.PNG)
 
 ### Star list
 
@@ -36,13 +36,13 @@ From 26/02/2025
 - Hover effect in light and dark mode
 - Click on the name of the star to go to the dedicated page 
 
-![Stargate: star list](/resources/images/screenshots/stargate-full.PNG)
+![Stargate: star list](./storage/app/private/screenshots/stargate-full.PNG)
 
-![Stargate: star list dark mode](/resources/images/screenshots/stargate-dark.PNG)
+![Stargate: star list dark mode](./storage/app/private/screenshots/stargate-dark.PNG)
 
-![Stargate hover effect](/resources/images/screenshots/hover-effect-stars.PNG)
+![Stargate hover effect](./storage/app/private/screenshots/hover-effect-stars.PNG)
 
-![Stargate hover effect dark mode](/resources/images/screenshots/hover-effect-stars-dark.PNG)
+![Stargate hover effect dark mode](./storage/app/private/screenshots/hover-effect-stars-dark.PNG)
 
 ### Constellations Index
 
@@ -51,13 +51,13 @@ From 26/02/2025
 - Hover effect in light and dark mode
 - Click on "Read more" to see the dedicated page
 
-![Constellations index](/resources/images/screenshots/constellations.PNG)
+![Constellations index](./storage/app/private/screenshots/constellations.PNG)
 
-![Constellations index dark mode](/resources/images/screenshots/constellations-dark.PNG)
+![Constellations index dark mode](./storage/app/private/screenshots/constellations-dark.PNG)
 
-![Constellations hover effect](/resources/images/screenshots/hover-effect-constellations.PNG)
+![Constellations hover effect](./storage/app/private/screenshots/hover-effect-constellations.PNG)
 
-![Constellations hover effect dark mode](/resources/images/screenshots/hover-effect-constellations-dark.PNG)
+![Constellations hover effect dark mode](./storage/app/private/screenshots/hover-effect-constellations-dark.PNG)
 
 ### Constellation page
 
@@ -65,32 +65,32 @@ From 26/02/2025
 - Constellation Magic: This code gathers information for each star and shows their references.
 - Shows stellar glyphs and keywords of each star of that constellation
 
-![Constellation page](/resources/images/screenshots/constellation-view.PNG)
+![Constellation page](./storage/app/private/screenshots/constellation-view.PNG)
 
-![Constellation page dark mode](/resources/images/screenshots/constellation-view-dark.PNG)
+![Constellation page dark mode](./storage/app/private/screenshots/constellation-view-dark.PNG)
 
 ### Star Page
 
 - Astronomical and magical information
 - Shows references for every information (taken from the database)
 
-![Star page](/resources/images/screenshots/star-view-1.PNG)
+![Star page](./storage/app/private/screenshots/star-view-1.PNG)
 
-![Star page](/resources/images/screenshots/star-view-2.PNG)
+![Star page](./storage/app/private/screenshots/star-view-2.PNG)
 
-![Star page dark mode](/resources/images/screenshots/star-view-1-dark.PNG)
+![Star page dark mode](./storage/app/private/screenshots/star-view-1-dark.PNG)
 
-![Star page dark mode](/resources/images/screenshots/star-view-2-dark.PNG)
+![Star page dark mode](./storage/app/private/screenshots/star-view-2-dark.PNG)
 
 ### Star Magic Page
 
 - Shows all magical correspondences related to each star
 
-![Star magic page](/resources/images/screenshots/starMagic-1.PNG)
-![Star magic page](/resources/images/screenshots/starMagic-2.PNG)
+![Star magic page](./storage/app/private/screenshots/starMagic-1.PNG)
+![Star magic page](./storage/app/private/screenshots/starMagic-2.PNG)
 
-![Star magic page dark mode](/resources/images/screenshots/starMagic-1-dark.PNG)
-![Star magic page dark mode](/resources/images/screenshots/starMagic-2-dark.PNG)
+![Star magic page dark mode](./storage/app/private/screenshots/starMagic-1-dark.PNG)
+![Star magic page dark mode](./storage/app/private/screenshots/starMagic-2-dark.PNG)
 
 
 
@@ -99,26 +99,26 @@ From 26/02/2025
 - Responsive design
 - Light and dark mode
 
-![Mobile view stargate](/resources/images/screenshots/mobile-stargate-1.PNG)
+![Mobile view stargate](./storage/app/private/screenshots/mobile-stargate-1.PNG)
 
-![Mobile view stargate](/resources/images/screenshots/mobile-stargate-2.PNG)
+![Mobile view stargate](./storage/app/private/screenshots/mobile-stargate-2.PNG)
 
-![Mobile view stargate dark mode](/resources/images/screenshots/mobile-stargate-1-dark.PNG)
+![Mobile view stargate dark mode](./storage/app/private/screenshots/mobile-stargate-1-dark.PNG)
 
-![Mobile view stargate dark mode](/resources/images/screenshots/mobile-stargate-2-dark.PNG)
+![Mobile view stargate dark mode](./storage/app/private/screenshots/mobile-stargate-2-dark.PNG)
 
 
-![Mobile view constellation cards](/resources/images/screenshots/mobile-constellations.PNG)
+![Mobile view constellation cards](./storage/app/private/screenshots/mobile-constellations.PNG)
 
-![Mobile view constellation cards dark mode](/resources/images/screenshots/mobile-constellations-dark.PNG)
+![Mobile view constellation cards dark mode](./storage/app/private/screenshots/mobile-constellations-dark.PNG)
 
-![Mobile view constellation](/resources/images/screenshots/mobile-view.PNG)
+![Mobile view constellation](./storage/app/private/screenshots/mobile-view.PNG)
 
-![Mobile view constellation dark mode](/resources/images/screenshots/mobile-view-dark.PNG)
+![Mobile view constellation dark mode](./storage/app/private/screenshots/mobile-view-dark.PNG)
 
-![Mobile view constellation](/resources/images/screenshots/mobile-star-view.PNG)
+![Mobile view constellation](./storage/app/private/screenshots/mobile-star-view.PNG)
 
-![Mobile view constellation](/resources/images/screenshots/mobile-star-view-dark.PNG)
+![Mobile view constellation](./storage/app/private/screenshots/mobile-star-view-dark.PNG)
 
 ## Add Info
 
